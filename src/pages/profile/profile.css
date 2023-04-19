@@ -1,0 +1,111 @@
+.profile {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 2000px;
+}
+
+.profile .header--main__add,
+.profile .header--main__logo,
+.profile .header--second__options,
+.profile .header--second__nav {
+    display: none;
+}
+
+.profile .header--main,
+.profile .header--second {
+    grid-template-columns: 1fr;
+    padding: 0;
+    margin: 0;
+}
+
+.profile .header--main__settings {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    gap: 25px;
+    margin-right: 10px;
+}
+.profile .header--main__options {
+    width: var(--section-width-3);
+    margin-inline: 10px;
+}
+
+.profile .header--main__search {
+    justify-self: center;
+    margin: 0;
+}
+
+.profile__header {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    align-items: center;
+    background-color: #fff;
+    padding-block: 10px;
+}
+/* End header and its content */
+
+
+
+/* Start main concepts of profile */
+.profile__body {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    justify-content: space-between;
+    margin-top: 25px;
+    gap: 25px;
+}
+
+.articles__container > * {
+    margin-bottom: 20px;
+}
+
+.profile .left-sidebar {
+    padding-left: 10px;
+}
+
+.profile__right-sidebar {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.profile__main-nav {
+    background-color: #fff;
+    margin-top: -25px;
+}
+
+.profile__main-nav > nav {
+    position: sticky;
+    top: 15px;
+}
+
+.profile__main-nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: sticky;
+    top: 25px;
+}
+
+.profile__main-nav span {
+    width: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 5px;
+    font-size: 30px;
+    padding-block: 15px;
+    cursor: pointer;
+}
+
+.profile__main-nav span img {
+    width: 30px;
+}
+
+.profile__main-nav span:hover {
+    background-color: var(--clr-brown);
+    color: #fff;
+}

@@ -1,0 +1,23 @@
+.projects__right-menu {
+    direction: rtl;
+}
+
+.projects__right-menu ul.projects__right-main-menu {
+    border-bottom: 1px solid var(--clr-brown);
+    margin-bottom: 10px;
+}
+
+.projects__right-menu li {
+    margin-bottom: 10px;
+}
+
+.projects__right-menu li a {
+    color: #000;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.projects__right-menu li a:hover {
+    color: #333;
+}

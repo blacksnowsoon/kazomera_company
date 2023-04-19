@@ -1,0 +1,29 @@
+.projects__body {
+    padding-inline: 15px;
+    /* height: 3000px; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.projects__body-leftside {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: static;
+    margin-right: 15px;
+}
+
+.projects__body-side {
+    display: grid;
+    align-content: flex-start;
+    gap: 10px;
+}
+
+.projects__body-rightside {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: static;
+    top: 15px;
+    margin-left: 15px;
+}

@@ -1,0 +1,32 @@
+:root {
+  --clr-main: #E4E6EB;
+  --clr-brown: #707070;
+  --clr-brown-light: #70707061;
+
+  --clr-ligh: #F2F3F5;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("./assets/fonts/Segoe\ UI.ttf"), url("./assets/fonts/Segoe\ UI\ Bold.ttf");
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--clr-main);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,132 @@
+.article {
+    border: 1px solid #ddd;
+    direction: rtl;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.article__header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    padding: 10px;
+    gap: 10px;
+}
+
+.small .article__header {
+    justify-content: flex-end;
+}
+
+.article__header-tools-items {
+    display: flex;
+    gap: 10px;
+    overflow: auto;
+}
+
+.article__header-tools-items li {
+    padding: 8px;
+    border-radius: 15px;
+    background-color: var(--clr-brown);
+    color: #fff;
+    cursor: pointer;
+}
+
+.article__header-tools-items li:first-of-type {
+    color: var(--clr-brown);
+    background-color: transparent;
+    padding: 0;
+    font-size: 22px;
+    display: flex;
+    align-self: center;
+}
+
+.article__header-tools-items li:first-of-type:hover ~ * {
+    opacity: 0;
+    transition: .5s linear;
+}
+
+.small .article__header-tools-items {
+    display: none;
+}
+
+.article__header-account,
+.article__header-account i {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+
+.article__header-account p {
+    width: max-content;
+}
+
+
+.article__body {
+    padding: 15px;
+    display: grid;
+    align-content: flex-start;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+}
+
+.small .article__body {
+    padding: 10px;
+}
+
+.article__body-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article__body-img img {
+    width: 100%;
+}
+
+
+.article__body h3 {
+    font-size: 1.25em;
+}
+
+.article__body p {
+    font-size: 12px;
+    margin-top: 5px;
+    text-indent: 10px;
+}
+
+
+.article__more-options {
+    display: flex;
+    gap: 10px;
+    padding-top: 10px;
+    margin: 10px;
+    margin-bottom: 0;
+    border-top: 1px solid #ddd;
+    justify-content: space-evenly;
+}
+
+.small .article__more-options {
+    display: none;
+}
+
+.article__more-options li {
+    padding: 10px;
+    font-size: 27px;
+    font-weight: 200;
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.article__more-options li:hover {
+    color: var(--color-icon, #555);
+    transform: translateY(-3px);
+}
