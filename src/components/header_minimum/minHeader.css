@@ -1,0 +1,40 @@
+.min-header {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    align-items: center;
+    background-color: #fff;
+    padding-block: 10px;
+}
+
+.profile .header--main__add,
+.min-header .header--main__logo,
+.min-header .header--second__options,
+.min-header .header--second__nav {
+    display: none;
+}
+
+.min-header .header--main,
+.min-header .header--second {
+    grid-template-columns: 1fr;
+    padding: 0;
+    margin: 0;
+}
+
+.min-header .header--main__settings {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    gap: 25px;
+    margin-right: 10px;
+}
+.min-header .header--main__options {
+    width: var(--section-width-3);
+    margin-inline: 10px;
+}
+
+.min-header .header--main__search {
+    justify-self: center;
+    margin: 0;
+}

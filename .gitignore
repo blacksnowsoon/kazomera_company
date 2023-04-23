@@ -29,3 +29,5 @@ dist/
 *.env
 .DS_Store
 .zip
+# Local Netlify folder
+.netlify

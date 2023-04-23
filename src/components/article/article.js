@@ -4,7 +4,7 @@ import { BiUserCircle } from 'react-icons/bi';
 import './article.css';
 import { RiFundsLine } from 'react-icons/ri';
 
-export default function Article({heading, more=false}) {
+export default function Article({heading, more=false, type=""}) {
   return (
     <article className='article'>
       <header className='article__header'>

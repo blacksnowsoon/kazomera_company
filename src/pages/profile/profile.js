@@ -4,22 +4,14 @@ import MainNav from '../../components/main_nav/mainNav'
 import Notifications from '../../components/notifications_section/notific'
 import Correspondence from '../../components/correspondence_section/corresp'
 import Articles from '../../components/articles/articles'
-import MainHeader from '../../components/main_header/mainHeader'
-import SecondHeader from '../../components/second_header/secondHeader'
-import { images } from '../../assets'
 import User from '../../components/user_section/user';
+import MinHeader from '../../components/header_minimum/minHeader';
 
 export default function Profile() {
   return (
     <div className='profile'>
       <div className='profile__header'>
-        <MainHeader />
-          <div style={{display:'flex',justifyContent:'space-between', alignItems:'center',marginLeft:'15px'}}>
-          <SecondHeader />
-          <a href="/">
-            <img alt="logo" src={images.logoAddress} style={{minWidth:'200px', paddingInline:"10px"}} />
-          </a>
-        </div>
+        <MinHeader />
       </div>
       <main className='profile__body'>
         <div className='left-sidebar'>
@@ -38,7 +30,7 @@ export default function Profile() {
           <Correspondence />
           <div style={{display:'flex',gap:'10px'}}>
             <Correspondence />
-            <div className='profile__main-nav'>
+            <div className='right-side'>
               <MainNav />
             </div>
           </div>

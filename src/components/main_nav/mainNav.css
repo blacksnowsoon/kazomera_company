@@ -1,0 +1,76 @@
+
+.nav__items {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.nav__item {
+    flex: 1;
+    border: 1px solid var(--clr-brown);
+}
+
+.nav__item:not(:last-of-type) {
+    border-right: 0;
+}
+
+.nav__item a {
+    flex: 1;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    padding-block: 5px;
+    color: #222;
+    font-size: 40px;
+}
+
+.nav__item a.active,
+.nav__item a:hover {
+    background-color: var(--clr-brown);
+    color: #fff;
+}
+
+.nav__item a.active,
+.nav__item:last-of-type a.active path,
+.nav__item:last-of-type:hover path {
+    stroke: #fff;
+}
+
+
+
+
+
+
+/* mainNav when it on the right side of the screen */
+.right-side .nav--main {
+    background-color: #fff;
+    height: 100%;
+    margin-top: -25px;
+}
+
+.right-side .nav__items {
+    flex-direction: column-reverse;
+    position: sticky;
+    top: -10px;
+    padding-top: 25px;
+}
+
+.right-side .nav__items li {
+    border: none;
+}
+
+.right-side .nav__items a {
+    padding: 10px 13px;
+}
+
+.right-side .nav__items path {
+    stroke-width: 1 !important;
+
+}
+
+.right-side .nav__items img {
+    width: 30px;
+}

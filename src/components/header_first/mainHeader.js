@@ -1,8 +1,9 @@
 import React from 'react';
-import { FaSearch } from 'react-icons/fa';
+import { IoIosSearch } from 'react-icons/io';
 import { HiOutlineBell } from 'react-icons/hi';
 import { images } from '../../assets';
 import './mainHeader.css';
+import { Link } from 'react-router-dom';
 
 export default function MainHeader() {
   return (
@@ -10,10 +11,10 @@ export default function MainHeader() {
       <div className='header--main__settings'>
         <ul className='header--main__options'>
           <li>
-            <span><HiOutlineBell /></span>
+            <i><span><HiOutlineBell fontSize={30} strokeWidth={1} /></span></i>
           </li>
           <li>
-            <span><HiOutlineBell /></span>
+            <i><span><HiOutlineBell fontSize={30} strokeWidth={1}/></span></i>
           </li>
           <li className='daul-item'>
             <span>EN</span>
@@ -21,13 +22,13 @@ export default function MainHeader() {
           </li>
         </ul>
         <div className='header--main__search'>
-          <span><FaSearch fontSize={15} /></span>
+          <i><span><IoIosSearch fontSize={23} /></span></i>
           <input type='search' className='r' placeholder='بحث......' />
         </div>
       </div>
       <div className='header--main__add'></div>
       <div className='header--main__logo'>
-        <a href="/"><img alt="logo" src={images.logoAddress} /></a>
+        <Link href="/"><img alt="logo" src={images.logoAddress} /></Link>
       </div>
     </header>
   )

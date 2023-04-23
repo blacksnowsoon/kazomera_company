@@ -13,13 +13,9 @@
   margin: 0;
 }
 
-@font-face {
-  font-family: "Segoe UI";
-  src: url("./assets/fonts/Segoe\ UI.ttf"), url("./assets/fonts/Segoe\ UI\ Bold.ttf");
-}
 
 body {
-  font-family: "Segoe UI", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: var(--clr-main);
 }
 
@@ -29,4 +25,12 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 400;
 }
