@@ -35,6 +35,7 @@ export default function App() {
       {/* <Route path="" element={} />
       <Route path="" element={} />
       <Route path="" element={} /> */}
+      <Route path='*' element={<>No site !!<Link to="/">Go back</Link></>} />
     </Routes>
   );
 }
