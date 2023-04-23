@@ -20,7 +20,9 @@ export default function App() {
   // })
 
   return (
-    <Routes>
+    <div>
+      <p>Legend is here!</p>
+      <Routes>
       <Route path='/' element={<Home />}>
         <Route index element={<News />} />
         <Route path="projects" element={<ProjectsArts />} />
@@ -36,7 +38,8 @@ export default function App() {
       <Route path="" element={} />
       <Route path="" element={} /> */}
       <Route path='*' element={<>No site !!<Link to="/">Go back</Link></>} />
-    </Routes>
+      </Routes>
+    </div>
   );
 }
 
