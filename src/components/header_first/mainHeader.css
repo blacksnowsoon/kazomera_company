@@ -86,3 +86,49 @@
 .header--main__logo img {
     width: 150px;
 }
+
+
+
+
+
+/* Start unusual things :D*/
+.header--main .settings-close > *,
+.header--main .settings-icon > *,
+.header--main .menu-icon > * {
+    display: block;
+    cursor: pointer;
+    font-size: calc(27px + (7px * 2));
+    padding: 7px;
+}
+.header--main .settings-icon {
+    justify-self: left;
+}
+.header--main .menu-icon {
+    justify-self: right;
+}
+@media (max-width: 992px) {
+    .header--main__logo {
+        justify-self: center;
+    }
+    .header--main__add,
+    .header--main__settings {
+        display: none !important;
+    }
+    .header--main .menu-icon,
+    .header--main .settings-icon,
+    .header--main .settings-close {
+        display: block !important;
+    }
+}
+
+
+/* Start settings' overlay (top section on the screen) */
+.header--main__settings.overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111111bf;
+}

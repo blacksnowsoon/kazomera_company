@@ -42,7 +42,7 @@
 .header--second__options .header--second__daul-item {
     flex: 1;
     overflow: hidden;
-    font-size: 18px;
+    font-size: 1rem;
 }
 
 .header--second__options li:first-of-type {
@@ -71,4 +71,15 @@
 
 .header--second__projects-buttons a:hover {
     background-color: #7b7a7a;
+}
+
+
+
+
+
+/* Start unusual things :D*/
+@media (max-width: 991px) {
+    .header--second {
+        display: none;
+    }
 }

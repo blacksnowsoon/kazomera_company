@@ -1,6 +1,6 @@
 import React from 'react'
 import './profile.css';
-import MainNav from '../../components/main_nav/mainNav'
+import MainNav from '../../components/nav_main/mainNav'
 import Notifications from '../../components/notifications_section/notific'
 import Correspondence from '../../components/correspondence_section/corresp'
 import Articles from '../../components/articles/articles'

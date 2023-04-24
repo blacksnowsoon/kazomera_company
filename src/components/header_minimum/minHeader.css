@@ -38,3 +38,16 @@
     justify-self: center;
     margin: 0;
 }
+
+
+
+
+
+@media (max-width: 991px) {
+    .min-header--main-header {
+        display: block !important;
+    }
+    .min-header {
+        display: none;
+    }
+}

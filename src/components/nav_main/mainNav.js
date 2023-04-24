@@ -15,8 +15,8 @@ export default function MainNav() {
           [
             {to:'/profile', ele:<TbUserCircle />},
             {to:'/kazomera', ele:<img alt="kazomera" src={images.logo} />},
-            {to:'/investments', ele:<FaRegHandshake />},
-            {to:'/contributions', ele:<AiOutlineDollarCircle />},
+            {to:'/investments', ele:<AiOutlineDollarCircle />},
+            {to:'/contributions', ele:<FaRegHandshake />},
             {to:'/projects', ele:<TbSquareLetterP />},
             {to:'/', ele:<GrHomeRounded style={{paddingBlock:"5px"}} />},
           ]

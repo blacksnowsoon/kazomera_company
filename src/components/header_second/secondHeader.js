@@ -1,7 +1,7 @@
 import React from 'react'
 import { RiCustomerService2Line} from 'react-icons/ri'
 import './secondHeader.css';
-import MainNav from '../main_nav/mainNav';
+import MainNav from '../nav_main/mainNav';
 import { Link } from 'react-router-dom';
 
 export default function SecondHeader() {
