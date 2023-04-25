@@ -10,6 +10,10 @@ import News from './components/articles_news/news';
 import { ProjectsArts } from './components/articles_projects/projectsArts';
 import ContribsArts from './components/articles_contributions/contribsArts';
 import InvestsArts from './components/articles_investments/investsArts';
+import Footer from './components/footer/footer';
+import Login from './pages/account/login';
+import Signup from './pages/account/signup';
+import Account from './pages/account/account';
 
 export default function App() {
 
@@ -20,23 +24,28 @@ export default function App() {
   // })
 
   return (
-    <Routes>
-      <Route path='/' element={<Home />}>
-        <Route index element={<News />} />
-        <Route path="projects" element={<ProjectsArts />} />
-        <Route path="contributions" element={<ContribsArts />} />
-        <Route path="investments" element={<InvestsArts />} />
-        <Route path="projects" />
-        <Route path="deals" />
-        <Route path="interests" />
-      </Route>
-      <Route path='/profile' element={<Profile />} />
-      <Route path='/requieres' element={<Requieres />} />
-      {/* <Route path="" element={} />
-      <Route path="" element={} />
-      <Route path="" element={} /> */}
-      <Route path='*' element={<>No site !!<Link to="/">Go back</Link></>} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path='/' element={<Home />}>
+          <Route index element={<News />} />
+          <Route path="projects" element={<ProjectsArts />} />
+          <Route path="contributions" element={<ContribsArts />} />
+          <Route path="investments" element={<InvestsArts />} />
+          <Route path="projects" />
+          <Route path="deals" />
+          <Route path="interests" />
+        </Route>
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/requieres' element={<Requieres />} />
+        <Route path="/account" element={<Account />}>
+          <Route path="login" element={<Login />} />
+          <Route path="signup" element={<Signup />} />
+        </Route>
+        {/* <Route path="" element={} /> */}
+        <Route path='*' element={<>No site !!<Link to="/">Go back</Link></>} />
+      </Routes>
+      <Footer />
+    </>
   );
 }
 
