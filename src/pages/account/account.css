@@ -23,6 +23,11 @@
     box-shadow: 0 3px 2px #000;
 }
 
+.account .heading {
+    margin-bottom: 1.25rem;
+    font-family:'Courier New', Courier, monospace;
+}
+
 .form {
     display: grid;
     gap: 1rem;
@@ -75,17 +80,13 @@
 
 
 
-.login__heading {
-    margin-bottom: 1.25rem;
-    font-family:'Courier New', Courier, monospace;
-}
 
-.login a {
+.account  a {
     display: block;
     width: fit-content;
     padding: 5px;
 }
 
-.login a:hover {
+.account a:hover {
     box-shadow: 0 3px 1px #000;
 }

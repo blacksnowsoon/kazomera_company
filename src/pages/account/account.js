@@ -14,7 +14,7 @@ export default function Account() {
 			<div className='account__body'>
 				<div className='account__box'>
 					<img alt="Kazomera logo" src={images.logo} />
-					<h1 className='login__heading'>Login</h1>
+					<h1 className='heading'>Login</h1>
 					<Outlet />
 				</div>
 			</div>
