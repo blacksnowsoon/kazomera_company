@@ -10,6 +10,9 @@ import News from './components/articles_news/news';
 import { ProjectsArts } from './components/articles_projects/projectsArts';
 import ContribsArts from './components/articles_contributions/contribsArts';
 import InvestsArts from './components/articles_investments/investsArts';
+import Account from './pages/account/account';
+import Login from './pages/account/login';
+import Signup from './pages/account/signup';
 
 export default function App() {
 
@@ -32,9 +35,10 @@ export default function App() {
       </Route>
       <Route path='/profile' element={<Profile />} />
       <Route path='/requieres' element={<Requieres />} />
-      {/* <Route path="" element={} />
-      <Route path="" element={} />
-      <Route path="" element={} /> */}
+      <Route path="/account" element={<Account />}>
+        <Route path="login" element={<Login />} />
+        <Route path="signup" element={<Signup />} />
+      </Route>
       <Route path='*' element={<>No site !!<Link to="/">Go back</Link></>} />
     </Routes>
   );
