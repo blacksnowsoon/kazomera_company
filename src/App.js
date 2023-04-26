@@ -13,6 +13,7 @@ import InvestsArts from './components/articles_investments/investsArts';
 import Account from './pages/account/account';
 import Login from './pages/account/login';
 import Signup from './pages/account/signup';
+import Footer from './components/footer/footer';
 
 export default function App() {
 
@@ -23,24 +24,27 @@ export default function App() {
   // })
 
   return (
-    <Routes>
-      <Route path='/' element={<Home />}>
-        <Route index element={<News />} />
-        <Route path="projects" element={<ProjectsArts />} />
-        <Route path="contributions" element={<ContribsArts />} />
-        <Route path="investments" element={<InvestsArts />} />
-        <Route path="projects" />
-        <Route path="deals" />
-        <Route path="interests" />
-      </Route>
-      <Route path='/profile' element={<Profile />} />
-      <Route path='/requieres' element={<Requieres />} />
-      <Route path="/account" element={<Account />}>
-        <Route path="login" element={<Login />} />
-        <Route path="signup" element={<Signup />} />
-      </Route>
-      <Route path='*' element={<>No site !!<Link to="/">Go back</Link></>} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path='/' element={<Home />}>
+          <Route index element={<News />} />
+          <Route path="projects" element={<ProjectsArts />} />
+          <Route path="contributions" element={<ContribsArts />} />
+          <Route path="investments" element={<InvestsArts />} />
+          <Route path="projects" />
+          <Route path="deals" />
+          <Route path="interests" />
+        </Route>
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/requieres' element={<Requieres />} />
+        <Route path="/account" element={<Account />}>
+          <Route path="login" element={<Login />} />
+          <Route path="signup" element={<Signup />} />
+        </Route>
+        <Route path='*' element={<>No site !!<Link to="/">Go back</Link></>} />
+      </Routes>
+      <Footer />
+    </>
   );
 }
 
