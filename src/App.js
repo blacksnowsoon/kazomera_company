@@ -14,6 +14,7 @@ import Account from './pages/account/account';
 import Login from './pages/account/login';
 import Signup from './pages/account/signup';
 import Footer from './components/footer/footer';
+import Recover from './pages/account/recover';
 
 export default function App() {
 
@@ -40,6 +41,7 @@ export default function App() {
         <Route path="/account" element={<Account />}>
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
+          <Route path="recover" element={<Recover />} />
         </Route>
         <Route path='*' element={<>No site !!<Link to="/">Go back</Link></>} />
       </Routes>

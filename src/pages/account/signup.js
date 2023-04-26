@@ -5,9 +5,15 @@ import { Link } from 'react-router-dom';
 export default function Signup() {
   return (
     <>
-      <form className='form'>
-        <input placeholder='Username' />
-        <input placeholder='Password' type='password' />
+      <h1 className='heading'>Signup</h1>
+      <form className='form signup__form'>
+        <div style={{display:'flex', gap:"3%"}}>
+          <input placeholder='Name' />
+          <input placeholder='Username' />
+        </div>
+        <input placeholder='Email' />
+        <input placeholder='Email again' />
+        <input placeholder='password' type='password' />
         <button>Login</button>
       </form>
       <Link to="../login">I have an account!</Link>

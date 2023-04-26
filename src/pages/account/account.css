@@ -1,12 +1,12 @@
 .account {
     min-height: 100vh;
     display: grid;
-    grid-template-rows: auto 1fr;
+    /* grid-template-rows: auto 1fr; */
 }
 
-.account__header {
+/* .account__header {
     background-color: #fff;
-}
+} */
 
 .account__body {
     display: flex;
@@ -16,7 +16,8 @@
 }
 
 .account__box {
-    width: 500px;
+    flex: 1;
+    max-width: 500px;
     padding: 2.5em 1.5em;
     border-radius: 6px;
     background-color: #fff;
@@ -33,7 +34,8 @@
     gap: 1rem;
 }
 
-.form > * {
+.form button,
+.form input {
     width: 100%;
     padding: 15px;
     border-radius: 1rem;
@@ -47,6 +49,7 @@
 
 .form input::placeholder {
     transition: .3s;
+    text-transform: capitalize;
 }
 
 .form input:focus::placeholder {
@@ -67,14 +70,16 @@
 
 .form button:hover {
     box-shadow: 0 3px 1px #000;
+    border-color: #000;
 }
 
 .form button:active {
     font-size: .9rem;
 }
 
-
-
+.recover__form button {
+    width: 100%;
+}
 
 
 
