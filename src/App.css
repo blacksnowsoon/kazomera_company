@@ -34,9 +34,24 @@
   color: #fff;
 }
 
-.daul-item {
-
+.error {
+  font-size: 10px;
+  color: red;
+  padding-inline: 5px;
 }
+
+
+ul.items-rounded-dark li {
+  padding: 8px;
+  border-radius: 15px;
+  background-color: var(--clr-brown);
+  color: #fff;
+}
+
+ul.items-rounded-dark li:hover {
+  background-color: #7b7a7a;
+}
+
 
 /* .container {
   width: 100%;

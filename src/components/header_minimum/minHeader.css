@@ -3,10 +3,10 @@
     grid-template-columns: 4fr 2fr;
     align-items: center;
     background-color: #fff;
-    padding-block: 10px;
+    padding-block: 5px;
 }
 
-.profile .header--main__add,
+.min-header .header--main__add,
 .min-header .header--main__logo,
 .min-header .header--second__options,
 .min-header .header--second__nav {
@@ -39,7 +39,10 @@
     margin: 0;
 }
 
-
+.min-header .header--second__projects-buttons a {
+    border-radius: 0px !important;
+    /* overflow: hidden; */
+}
 
 
 

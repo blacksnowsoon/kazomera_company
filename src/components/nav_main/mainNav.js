@@ -13,15 +13,15 @@ export default function MainNav() {
       <ul className='nav__items'>
         {
           [
-            {to:'/profile', ele:<TbUserCircle />},
-            {to:'/kazomera', ele:<img alt="kazomera" src={images.logo} />},
-            {to:'/investments', ele:<AiOutlineDollarCircle />},
-            {to:'/contributions', ele:<FaRegHandshake />},
-            {to:'/projects', ele:<TbSquareLetterP />},
-            {to:'/', ele:<GrHomeRounded style={{paddingBlock:"5px"}} />},
+            {name: "حسابي", to:'/profile', ele:<TbUserCircle />},
+            {name: "كازوميرا", to:'/kazomera', ele:<img alt="kazomera" src={images.logo} />},
+            {name: "استثمارات", to:'/investments', ele:<AiOutlineDollarCircle />},
+            {name: "مساهمات", to:'/contributions', ele:<FaRegHandshake />},
+            {name: "مشروعات", to:'/projects', ele:<TbSquareLetterP />},
+            {name: "أخبار", to:'/', ele:<GrHomeRounded style={{paddingBlock:"5px"}} />},
           ]
           .map((item, i) => (
-            <li key={i} className={`nav__item`}>
+            <li key={i} className={`nav__item`} data-tooltip={item.name}>
               <NavLink to={item.to} >
                 {item.ele}
               </NavLink>

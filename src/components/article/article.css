@@ -1,8 +1,9 @@
 .article {
-    border: 1px solid #ddd;
-    direction: rtl;
+    border: 1px solid #bbb;
     background-color: #fff;
+    direction: rtl;
     border-radius: 15px;
+    margin-bottom: 15px;
 }
 
 .article__header {
@@ -11,8 +12,10 @@
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #eee;
-    padding: 10px;
+    padding: 10px 5px;
     gap: 10px;
+    position: relative;
+
 }
 
 .small .article__header {
@@ -21,31 +24,29 @@
 
 .article__header-tools-items {
     display: flex;
-    gap: 10px;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .article__header-tools-items li {
-    padding: 8px;
-    border-radius: 15px;
-    background-color: var(--clr-brown);
-    color: #fff;
-    cursor: pointer;
+    cursor:default;
+    margin-inline-end: 5px;
 }
 
-.article__header-tools-items li:first-of-type {
+
+.article__header-tools-items li.article__header-tools-more {
     color: var(--clr-brown);
     background-color: transparent;
     padding: 0;
     font-size: 1.25rem;
     display: flex;
     align-self: center;
+    cursor: pointer;
 }
 
-.article__header-tools-items li:first-of-type:hover ~ * {
-    opacity: 0;
-    transition: .5s linear;
+.article__header-tools-items li.article__header-tools-more:hover {
+    background-color: transparent;
 }
+
 
 .small .article__header-tools-items {
     display: none;
@@ -65,42 +66,15 @@
 }
 
 
+/* Start basics of body */
 .article__body {
-    padding: 15px;
+    padding: 10px;
     display: grid;
     align-content: flex-start;
-    grid-template-columns: auto 1fr;
     gap: 10px;
 }
 
-.small .article__body {
-    padding: 10px;
-}
-
-.article__body-img {
-    width: 70px;
-    height: 70px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.article__body-img img {
-    width: 100%;
-}
-
-
-.article__body h3 {
-    font-size: 1.25em;
-}
-
-.article__body p {
-    margin-top: 5px;
-    text-indent: 10px;
-}
-
+/* End basics of body */
 
 .article__more-options {
     display: flex;
@@ -120,7 +94,9 @@
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
+    cursor: pointer;
 }
+
 
 .article__more-options li:not(:last-of-type) {
     border-left: 1px solid #ddd;
@@ -130,7 +106,26 @@
     transition: transform .3s;
     cursor: pointer;
 }
-.article__more-options li > *:hover {
+.article__more-options li:hover > * {
     color: var(--color-icon, #555);
-    transform: translateY(-2px);
+}
+
+
+.article__header-data-label {
+    top: 100%;
+    right: 10px;
+    display: none;
+}
+.article__header-data-label ul {
+    padding: 5px;
+    background-color: var(--clr-brown);
+    flex-direction: column;
+    gap: 0;
+    border-radius: 4px;
+    box-shadow: 0 0 10px #777;
+
+}
+
+.article__header-data-label li:not(:last-of-type) {
+    border-bottom: 1px solid #707070a4;
 }

@@ -5,7 +5,7 @@ import Adds from '../../components/adds_section/adds';
 import RightMneu from '../../components/menu_mine/menuMine';
 import MainHeader from '../../components/header_first/mainHeader';
 import SecondHeader from '../../components/header_second/secondHeader';
-import Article from '../../components/article/article';
+import Article from '../../components/article/article_header';
 import { Outlet } from 'react-router-dom';
 
 

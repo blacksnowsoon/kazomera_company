@@ -40,7 +40,9 @@ export default function MainHeader() {
       </div>
       <div className='header--main__add'></div>
       <div className='header--main__logo'>
-        <Link href="/"><img alt="logo" src={images.logoAddress} /></Link>
+        <Link to="/">
+          <img alt="logo" src={images.logoAddress} />
+        </Link>
       </div>
       <i className='menu-icon' style={{display: 'none'}}>
         <AiOutlineMenu />

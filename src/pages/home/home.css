@@ -1,8 +1,13 @@
+.home .header--second__projects-buttons {
+    width: auto;
+}
+
 .home__body {
     padding-inline: 15px;
     /* height: 3000px; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);    
+    margin-bottom: 20px;
 
 }
 
@@ -26,7 +31,6 @@
 }
 
 
-
 @media (max-width: 1500px) {
     .home__body {
         grid-template-columns: 1fr 2fr 1fr;
@@ -47,6 +51,7 @@
     .home__rightside .adds {
         display: none;
     }
+
 }
 
 @media (max-width: 1200px) {
@@ -64,7 +69,7 @@
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
     .home__body {
         grid-template-columns: 1fr 2fr;
         margin-top: 25px;

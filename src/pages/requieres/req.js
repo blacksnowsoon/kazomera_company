@@ -4,8 +4,8 @@ import MainHeader from '../../components/header_first/mainHeader';
 import Adds from '../../components/adds_section/adds';
 import RightMneu from '../../components/menu_mine/menuMine';
 import Notifications from '../../components/notifications_section/notific';
-import Articles from '../../components/articles/articles';
-import Article from '../../components/article/article';
+import ArticlesNews from '../../components/articles_news/articles_news';
+// import Article from '../../components/article/article';
 import './req.css';
 
 export default function Requieres() {
@@ -19,7 +19,7 @@ export default function Requieres() {
           <Adds />
         </div>
         <div className='req__content'>
-          <Article />
+          <ArticlesNews />
         </div>
         <div className='req__right-sidebar'>
           <Adds />

@@ -1,10 +1,10 @@
 .user {
     direction: rtl;
     margin-bottom: 20px;
+    border: 1px solid #bbb;
     border-radius: var(--round-middle);
     overflow: hidden;
     background-color: #fff;
-    box-shadow: 0 1px 15px #aaa;
 }
 
 .user__background {

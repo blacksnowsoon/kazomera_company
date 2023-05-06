@@ -21,6 +21,7 @@
     justify-content: center;
     border: 1px solid var(--clr-brown);
     border-radius: var(--round-acirc);
+    cursor: pointer;
 }
 
 .header--second__options span ,
@@ -31,7 +32,6 @@
     text-align: center;
     padding: 10px;
     flex: 1;
-    cursor: pointer;
 }
 
 .header--second__options {
@@ -60,18 +60,17 @@
 
 .header--second__projects-buttons {
     justify-content: flex-end;
+    width: max-content;
 }
 
 .header--second__projects-buttons a {
     color: #fff;
-    border: 1px solid var(--clr-brown);
-    border-radius: var(--round-acirc);
-    background-color: var(--clr-brown);
 }
 
-.header--second__projects-buttons a:hover {
-    background-color: #7b7a7a;
+.header--second__projects-buttons span {
+    padding: 3px;
 }
+
 
 
 

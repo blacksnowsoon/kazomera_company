@@ -18,6 +18,13 @@ const favMenu = [
     {icon: '', title: 'العناصر المحفوظة', to:'reserved'},
 ]
 
+const pagesMenu = [
+  {icon: '', title: 'تسجيل الدخول', to:'/account/login'},
+  {icon: '', title: 'الحساب', to:'/profile'},
+  {icon: '', title: 'المتطلبات', to:'/requieres'},
+
+]
+
 function itemsCreator(list) {
   return (
     list.map(({icon, title, to:address}, i) => {
@@ -39,6 +46,8 @@ export default function menuMine() {
     <div className='projects__right-menu'>
       <ul className='projects__right-main-menu'>{itemsCreator(mainMenu)}</ul>
       <ul className='projects__right-fav-menu'>{itemsCreator(favMenu)}</ul>
+      <p style={{marginBottom: "10px"}}>صفحة: </p>
+      <ul className='projects__right-pages-menu'>{itemsCreator(pagesMenu)}</ul>
     </div>
   )
 }

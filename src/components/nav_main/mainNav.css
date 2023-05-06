@@ -45,32 +45,32 @@
 
 
 /* mainNav when it on the right side of the screen */
-.right-side .nav--main {
+.right .nav--main {
     background-color: #fff;
-    height: 100%;
+    height: calc(100% + 25px);
     margin-top: -25px;
 }
 
-.right-side .nav__items {
+.right .nav__items {
     flex-direction: column-reverse;
     position: sticky;
     top: -10px;
-    padding-top: 25px;
+    padding-top: 15px;
 }
 
-.right-side .nav__items li {
+.right .nav__items li {
     border: none;
 }
 
-.right-side .nav__items a {
+.right .nav__items a {
     padding: 10px 13px;
 }
 
-.right-side .nav__items path {
+.right .nav__items path {
     stroke-width: 1 !important;
 
 }
 
-.right-side .nav__items img {
+.right .nav__items img {
     width: 30px;
 }

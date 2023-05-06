@@ -15,7 +15,7 @@ export default function Correspondence() {
           <i><FaSearch /></i>
           <input type="search" placeholder='بحث في المراسلات' />
         </div>
-        <ul>
+        <ul style={{textAlign:"center"}}>
           <li className='active'><span>ضمن علاقاتي</span></li>
           <li><span>خارج علاقاتي</span></li>
         </ul>

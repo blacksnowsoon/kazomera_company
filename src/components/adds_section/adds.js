@@ -11,8 +11,6 @@ export default function Adds() {
                 1
               </div>
               <div className='add__base'>
-                0
-                <span></span>
                 <span></span>
                 <span></span>
                 <span></span>

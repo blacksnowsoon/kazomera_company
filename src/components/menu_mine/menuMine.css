@@ -2,7 +2,7 @@
     direction: rtl;
 }
 
-.projects__right-menu ul.projects__right-main-menu {
+.projects__right-menu ul:not(:last-of-type) {
     border-bottom: 1px solid var(--clr-brown);
     margin-bottom: 10px;
 }
