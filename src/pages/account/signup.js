@@ -3,6 +3,7 @@ import { images } from '../../assets';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { DevTool } from '@hookform/devtools';
+import { useDispatch } from 'react-redux';
 import axios from 'axios';
 
 
@@ -13,7 +14,8 @@ export default function Signup() {
   const { handleSubmit, control, register, formState: { errors } } = form;
   function onSubmit(data) {
     console.log("Form submit", data);
-    axios.post('http://127.0.0.1:8000/')
+    axios.post("http://127.0.0.1:8000/api-auth/", data)
+    .then(res => console.log(res.data))
   }
 
   return (
