@@ -22,6 +22,7 @@
     border: 1px solid var(--clr-brown);
     border-radius: var(--round-acirc);
     cursor: pointer;
+    overflow: hidden;
 }
 
 .header--second__options span ,
@@ -65,7 +66,14 @@
 
 .header--second__projects-buttons a {
     color: #fff;
+    display: block;
 }
+.header--second__projects-buttons a {padding: 8px;}
+.header--second__projects-buttons li {padding: 0 !important}
+
+
+.header--second__projects-buttons a.active {background-color: blue;}
+.header--second__projects-buttons a.active:hover {background-color: rgba(0, 0, 255, 0.834);}
 
 .header--second__projects-buttons span {
     padding: 3px;

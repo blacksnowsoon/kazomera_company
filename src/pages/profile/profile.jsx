@@ -1,4 +1,3 @@
-import React from 'react'
 import './profile.css';
 
 import MainNav from '../../components/nav_main/mainNav'

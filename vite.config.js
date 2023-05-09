@@ -1,7 +1,18 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
+
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(), 
+    'macros',
+    {
+      name: 'vite:import-analysis',
+      enforce: 'pre',
+      transform: (code) => code,
+    },
+  ],
+  'fontawesome-svg-core': {
+    'license': 'free',
+  },
 })

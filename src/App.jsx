@@ -1,11 +1,10 @@
-import React from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import './App.css';
 
 import Home from './pages/home/home';
 import Profile from './pages/profile/profile';
 import Requieres from './pages/requieres/req';
-import Footer from './components/footer/footer';
+import Create from './pages/create/create';
 
 import ArticlesNews from './components/articles_news/articles_news';
 import ArticlesProjects from './components/articles_projects/articles_projects';
@@ -18,6 +17,8 @@ import Signup from './pages/account/signup';
 import Recover from './pages/account/recover';
 import Reserved from './pages/reserved/reserved';
 import Tooltip from './components/tooltip/tooltip';
+import Footer from './components/footer/footer';
+import ProjectSection from './pages/create/project/project';
 
 export default function App() {
 
@@ -43,7 +44,11 @@ export default function App() {
           <Route path="recover" element={<Recover />} />
         </Route>
         <Route path="reserved" element={<Reserved />} />
+        <Route path="create" element={<Create />}>
+          <Route path="project" element={<ProjectSection />} />
+        </Route>
         <Route path='*' element={<>No site !!<Link to="/">Go back</Link></>} />
+
       </Routes>
       <Footer />
     </>

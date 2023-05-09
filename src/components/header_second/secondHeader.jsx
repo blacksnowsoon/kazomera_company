@@ -1,8 +1,7 @@
-import React from 'react'
 import { RiCustomerService2Line} from 'react-icons/ri'
 import './secondHeader.css';
 import MainNav from '../nav_main/mainNav';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 export default function SecondHeader() {
   return (
@@ -21,13 +20,13 @@ export default function SecondHeader() {
       </div>
       <ul className='header--second__projects-buttons items-rounded-dark'>
         <li>
-          <Link to=""><span>إنشاء مشروع</span></Link>  
+          <NavLink to="/create/project"><span>إنشاء مشروع</span></NavLink>  
         </li>
         <li>
-          <Link to=""><span>تقديم مساهمة</span></Link>  
+          <NavLink to="/create/contribution"><span>تقديم مساهمة</span></NavLink>  
         </li>
         <li>
-          <Link to=""><span>عرض استثمار</span></Link>  
+          <NavLink to="/create/investment"><span>عرض استثمار</span></NavLink>  
         </li>
       </ul>
     </header>

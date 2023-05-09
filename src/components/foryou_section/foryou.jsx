@@ -1,7 +1,6 @@
-import React from 'react'
-import ArticlesProjects from '../../components/articles_projects/articles_projects'
-import ArticlesContributions from '../../components/articles_contributions/articles_cont'
-import ArticlesInvestments from '../../components/articles_investments/articles_invest'
+import ArticlesProjects from '../articles_projects/articles_projects'
+import ArticlesContributions from '../articles_contributions/articles_cont'
+import ArticlesInvestments from '../articles_investments/articles_invest'
 import './foryou.css';
 import { GrClose } from 'react-icons/gr';
 

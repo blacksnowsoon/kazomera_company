@@ -1,6 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { images } from '../../assets';
 import { useForm } from 'react-hook-form';
 import { DevTool } from '@hookform/devtools';
 import axios from 'axios';
@@ -21,7 +20,7 @@ export default function Login() {
       console.log(res);
       setLogin({connected: true, data: "Login success"})
     })
-    .catch(err => setLogin({connected: false, data: "Login faild"}))
+    .catch(() => setLogin({connected: false, data: "Login faild"}))
   }
 
   return (

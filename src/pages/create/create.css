@@ -1,0 +1,12 @@
+.create {
+
+}
+
+.create__body {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.create__content {
+    margin-inline: 10px;
+}

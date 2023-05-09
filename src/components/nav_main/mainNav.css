@@ -45,6 +45,9 @@
 
 
 /* mainNav when it on the right side of the screen */
+.right {
+    height: 100%;
+}
 .right .nav--main {
     background-color: #fff;
     height: calc(100% + 25px);

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import MinHeader from '../../components/header_minimum/minHeader'
 import Notifications from '../../components/notifications_section/notific'
 
@@ -10,9 +10,9 @@ import ArticleInvestments from '../../components/articles_investments/article_in
 import ArticleNews from '../../components/articles_news/article_news'
 import ArticleProjects from '../../components/articles_projects/article_projects'
 import ArticleContributions from '../../components/articles_contributions/article_cont'
-import ArticlesProjects from '../../components/articles_projects/articles_projects'
-import ArticlesContributions from '../../components/articles_contributions/articles_cont'
-import ArticlesInvestments from '../../components/articles_investments/articles_invest'
+// import ArticlesProjects from '../../components/articles_projects/articles_projects'
+// import ArticlesContributions from '../../components/articles_contributions/articles_cont'
+// import ArticlesInvestments from '../../components/articles_investments/articles_invest'
 import Foryou from '../../components/foryou_section/foryou'
 
 const articlesAPI = [
@@ -23,7 +23,7 @@ const articlesAPI = [
 	{
 		name: "الأخبار", 
 		type: "news", 
-	  content: [
+		content: [
 			<ArticleNews heading={"خبر 1"} />, 
 			<ArticleNews heading={"خبر 2"} />
 	]
@@ -31,14 +31,14 @@ const articlesAPI = [
 	{
 		name: "المشروعات", 
 		type: "projects", 
-	  content: [
+		content: [
 			<ArticleProjects heading={"مشروع 1"} />
 		]
 	}, 
 	{
 		name: "المساهمات", 
 		type: "contributions", 
-	  content: [
+		content: [
 			<ArticleContributions heading={"مساهمة 1"} />, 
 			<ArticleContributions heading={"مساهمة 2"} />, 
 		]
@@ -46,7 +46,7 @@ const articlesAPI = [
 	{
 		name: "الاستثمارات", 
 		type: "investments", 
-	  content: [
+		content: [
 			<ArticleInvestments heading={"استثمار 1"} />, 
 			<ArticleInvestments heading={"استثمار 2"} />, 
 			<ArticleInvestments heading={"استثمار 3"} />
@@ -81,7 +81,7 @@ export default function Reserved() {
 				</ul>
 				<div className='reserved__articles'>
 					{
-						articlesAPI.map((item, i) => (
+						articlesAPI.map((item) => (
 								currentFilter === "all" ? item.content : 
 								currentFilter === item.type ? item.content : null
 						))
