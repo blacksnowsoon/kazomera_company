@@ -1,13 +1,13 @@
 
 export default function ProjectSection() {
   return (
-    <div className="project">
-			<div className="project__info">
+    <section className="create-section create-section--project">
+			<div className="create-section__info">
 
       </div>
-      <div className="project__content">
-
+      <div className="create-section__content">
+        
       </div>
-		</div>
+		</section>
   )
 }
