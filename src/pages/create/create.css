@@ -9,4 +9,8 @@
 
 .create__content {
     margin-inline: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 14px;
+    border: 1px solid #bbb;
 }

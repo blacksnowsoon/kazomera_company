@@ -18,7 +18,7 @@ export default function SecondHeader() {
       <div className='header--second__nav'>
         <MainNav />
       </div>
-      <ul className='header--second__projects-buttons items-rounded-dark'>
+      <ul className='header--second__projects-buttons items-btns items-btns--blue-active'>
         <li>
           <NavLink to="/create/project"><span>إنشاء مشروع</span></NavLink>  
         </li>

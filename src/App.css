@@ -41,16 +41,36 @@
 }
 
 
-ul.items-rounded-dark li {
+.btn,
+ul.items-btns li {
   padding: 8px;
   border-radius: 15px;
+  border: 1px solid var(--clr-brown);
   background-color: var(--clr-brown);
   color: #fff;
+  cursor: pointer;
 }
 
-ul.items-rounded-dark li:hover {
+.btn:hover,
+ul.items-btns li:hover {
   background-color: #7b7a7a;
 }
+.btn:active,
+ul.items-btns li:active {
+  transform: scale(.96);
+}
+
+
+ul.items-btns--blue-active a.active,
+ul.items-btns--blue-active li.active {
+  background-color: blue !important;
+}
+
+ul.items-btns--blue-active a.active:hover,
+ul.items-btns--blue-active li.active:hover {
+  background-color: rgb(5, 5, 232) !important;
+}
+
 
 main {
   min-height: 100vh;

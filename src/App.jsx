@@ -48,7 +48,6 @@ export default function App() {
           <Route path="project" element={<ProjectSection />} />
         </Route>
         <Route path='*' element={<>No site !!<Link to="/">Go back</Link></>} />
-
       </Routes>
       <Footer />
     </>

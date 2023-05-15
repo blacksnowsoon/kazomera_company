@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { DevTool } from '@hookform/devtools';
 import axios from 'axios';
+// 400: the server could not understand the request due to 01 invalid syntax or 02 missing information in the request.
 
 
 let renderCounter = 1
@@ -10,9 +11,10 @@ export default function Signup() {
   const form = useForm();
   const { handleSubmit, control, register, formState: { errors } } = form;
   function onSubmit(data) {
-    console.log("Form submit", data);
-    axios.post("http://127.0.0.1:8000/api-auth/login/", data)
-    .then(res => console.log(res.data))
+    console.log("Form submitting:", data);
+    axios.post("http://127.0.0.1:8000/auth/register/", data)
+    .then(res => console.log("res", res))
+    .cath(err => console.log("err", err))
   }
 
   return (

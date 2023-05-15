@@ -15,12 +15,15 @@ export default function Login() {
 
   function onSubmit(data) {
     console.log("Form submitted", data);
-    axios.get('http://127.0.0.1:8000/api-auth/login/')
+    axios.post('http://127.0.0.1:8000/auth/login/', data)
     .then(res => {
-      console.log(res);
+      console.log("res", res);
       setLogin({connected: true, data: "Login success"})
     })
-    .catch(() => setLogin({connected: false, data: "Login faild"}))
+    .catch((err) => {
+      console.log("err", err);
+      setLogin({connected: false, data: "Login faild"})
+    })
   }
 
   return (

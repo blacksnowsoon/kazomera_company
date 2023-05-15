@@ -54,18 +54,7 @@
 }
 
 .reserved__options--filters li {
-    cursor: pointer;
     font-size: 1.25em;
-}
-
-.reserved__options--filters li:hover,
-.reserved__options--filters li.active {
-    background-color: blue !important;
-}
-
-.reserved__options--filters li:active {
-    transform: scale(.95);
-    box-shadow: 0 2px 2px #000;
 }
 
 

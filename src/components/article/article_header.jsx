@@ -13,7 +13,7 @@ export default function ArticleHeader({heading}) {
 
   return (
       <header className='article__header'>
-        <ul className='article__header-tools-items items-rounded-dark'>
+        <ul className='article__header-tools-items items-btns'>
           <li className='article__header-tools-more' 
               onMouseEnter={() => setClosed(false)}
               onMouseLeave={() => setClosed(true)}
@@ -29,7 +29,7 @@ export default function ArticleHeader({heading}) {
           <i><BiUserCircle fontSize={30} fontWeight={300} /></i>
         </div>
         <div className='article__header-data-label' style={{position: "absolute", display: isClosed ? "none":"block"}}>
-          <ul className='article__header-tools-items items-rounded-dark'>{items()}</ul>
+          <ul className='article__header-tools-items items-btns'>{items()}</ul>
         </div>
       </header>
   )

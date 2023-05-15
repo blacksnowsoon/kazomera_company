@@ -68,7 +68,7 @@ export default function Reserved() {
 				<Notifications />
 			</div>
 			<div className='reserved__content'>  
-				<ul className='reserved__options--filters items-rounded-dark'>
+				<ul className='reserved__options--filters items-btns items-btns--blue-active'>
 					{
 						articlesAPI.map(({name, type}, i) => (
 							<li key={i} 

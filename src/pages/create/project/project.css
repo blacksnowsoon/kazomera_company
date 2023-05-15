@@ -1,0 +1,30 @@
+.project__body {
+    padding: 10px;
+    direction: rtl;
+}
+
+.project__body input {
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid var(--clr-brown);
+    width: 100%;
+}
+
+.project__body ul {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #bbb;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.project__part {
+    margin-bottom: 50px;
+}
+
+.project__part-heading {
+    margin-bottom: 13px;
+    font-size: 18px;
+}
+
