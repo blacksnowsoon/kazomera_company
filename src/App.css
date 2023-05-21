@@ -72,6 +72,20 @@ ul.items-btns--blue-active li.active:hover {
 }
 
 
+ul.items-btns--black li {
+  background-color: black;
+  border: 1px solid #000;
+}
+ul.items-btns--black li a {
+  color: #fff;
+}
+
+ul.items-btns--black li:hover {
+  background-color: #252525;
+}
+
+
+
 main {
   min-height: 100vh;
   margin-top: 25px;

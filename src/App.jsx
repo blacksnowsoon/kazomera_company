@@ -18,7 +18,10 @@ import Recover from './pages/account/recover';
 import Reserved from './pages/reserved/reserved';
 import Tooltip from './components/tooltip/tooltip';
 import Footer from './components/footer/footer';
-import ProjectSection from './pages/create/project/project';
+
+import ProjectSector from './pages/create/project/project';
+import ContribSector from './pages/create/contrib/contrib';
+
 
 export default function App() {
 
@@ -45,7 +48,8 @@ export default function App() {
         </Route>
         <Route path="reserved" element={<Reserved />} />
         <Route path="create" element={<Create />}>
-          <Route path="project" element={<ProjectSection />} />
+          <Route path="project" element={<ProjectSector />} />
+          <Route path="contribution" element={<ContribSector />} />
         </Route>
         <Route path='*' element={<>No site !!<Link to="/">Go back</Link></>} />
       </Routes>

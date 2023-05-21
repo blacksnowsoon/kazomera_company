@@ -11,10 +11,11 @@ export default function Signup() {
   const form = useForm();
   const { handleSubmit, control, register, formState: { errors } } = form;
   function onSubmit(data) {
-    console.log("Form submitting:", data);
-    axios.post("http://127.0.0.1:8000/auth/register/", data)
+    const myData = {username: data.username, email: data.email, password: data.firstPassword}
+    console.log("Form submitting:", myData);
+    axios.post("https://kazapp.onrender.com/auth/register/", myData)
     .then(res => console.log("res", res))
-    .cath(err => console.log("err", err))
+    .catch(err => console.log("err", err))
   }
 
   return (

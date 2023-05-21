@@ -1,30 +1,42 @@
-.project__body {
-    padding: 10px;
-    direction: rtl;
+
+
+
+/* Start first section of project sector */
+.project-sector__header ul:last-of-type li {
+    background-color: #fff;
+    color: var(--clr-brown)
 }
 
-.project__body input {
+.project-section__body {
+    padding: 10px;
+}
+
+.project-section__body input {
     padding: 10px;
     border-radius: 15px;
     border: 1px solid var(--clr-brown);
     width: 100%;
 }
 
-.project__body ul {
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #bbb;
+
+
+/* Start first part */
+.project-section__partitions #part_0 .box, label {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     gap: 8px;
-    flex-wrap: wrap;
 }
-
-.project__part {
-    margin-bottom: 50px;
-}
-
-.project__part-heading {
-    margin-bottom: 13px;
-    font-size: 18px;
-}
+/* Start first part */
+/* Start first part */
+/* Start first part */
+/* Start first part */
+/* Start first part */
+/* Start first part */
+/* Start first part */
+/* Start first part */
+/* Start first part */
+/* Start first part */
+/* Start first part */
+/* Start first partv */
 
