@@ -15,9 +15,9 @@ export default function Login() {
 
   function onSubmit(data) {
     console.log("Form submitted", data);
-    axios.post('http://127.0.0.1:8000/auth/login/', data)
-    .then(res => {
-      console.log("res", res);
+    axios.post('https://kazapp.onrender.com/auth/login/', data)
+    .then(req => {
+      console.log("res", req);
       setLogin({connected: true, data: "Login success"})
     })
     .catch((err) => {
