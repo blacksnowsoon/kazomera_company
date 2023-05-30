@@ -1,9 +1,14 @@
 import React, { useState } from 'react'
 
 const projectParts = [
-  {id: 0, name: 'المجال', isActive: true},
-  {id: 1, name: 'الوصف', isActive: true}, 
-  {id: 2, name: 'التصنيف', isActive: true}, 
+  {id: 0, name: 'التمويل', isActive: true},
+  {id: 1, name: 'الفريق', isActive: true}, 
+  {id: 2, name: 'المكان', isActive: true}, 
+  {id: 3, name: 'المعدات', isActive: true}, 
+  {id: 4, name: 'التجهيزات', isActive: true}, 
+  {id: 5, name: 'المنتجات', isActive: true}, 
+  {id: 6, name: 'الخدمات', isActive: true}, 
+  {id: 7, name: 'إضافة قسم', isActive: true}, 
 ]
 
 export default function ProjectSectionReq() {
@@ -19,21 +24,24 @@ export default function ProjectSectionReq() {
 
   return (
     <section className="create-section">
-      <h3 className='create-section__heading'>: المتطلبات</h3>
-      <div className="create-section__body project-section__body">
+      <header>
+        <h3 className='create-section__heading'>: المتطلبات</h3>
         <ul className='items-btns items-btns--blue-active'>
-          {
-            projectPartsState.map(({id, name, isActive}, i) => (
-              <li key={i} onClick={() => checkActive(id)} className={isActive ? "active" : ""}>
-                {name}
-              </li> 
-            ))
-          }
-        </ul>
+            {
+              projectPartsState.map(({id, name, isActive}, i) => (
+                <li key={i} onClick={() => checkActive(id)} className={isActive ? "active" : ""}>
+                  {name}
+                </li> 
+              ))
+            }
+          </ul>
+      </header>
+      <div className="create-section__body project-section__body">
+
         <div className="create-section__partitions project-section__partitions project-section__partitions--req">
 
           <div className="create-section__part create-section__part-0" id="part_0">
-            <h3 className="create-section__part-heading">: {projectParts[0].name}</h3>
+            <h4 className="create-section__part-heading">: {projectParts[0].name}</h4>
             <div className="box">
               <label>
                 <span>القطاع</span> 
@@ -51,12 +59,12 @@ export default function ProjectSectionReq() {
           </div>
 
           <div className="create-section__part" id="part_1">
-            <h3 className="create-section__part-heading">: {projectParts[1].name}</h3>
+            <h4 className="create-section__part-heading">: {projectParts[1].name}</h4>
             <input placeholder=" ........ اكتب سطر أو أكثر عن وصف المشروع" />
           </div>
 
           <div className="create-section__part" id="part_2">
-            <h3 className="create-section__part-heading">: {projectParts[2].name}</h3>
+            <h4 className="create-section__part-heading">: {projectParts[2].name}</h4>
           </div>
 
         </div>

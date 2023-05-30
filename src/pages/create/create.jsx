@@ -2,7 +2,8 @@ import { Outlet } from "react-router-dom";
 import MinHeader from "../../components/header_minimum/minHeader";
 import MainNav from "../../components/nav_main/mainNav";
 import "./create.css";
-import { FaRegUserCircle, FaUserCircle } from "react-icons/fa";
+
+import { AccountCircle } from "../../assets/svgs";
 
 
 export default function Create() {
@@ -21,7 +22,7 @@ export default function Create() {
 						<div>
 							<span>تغيير الحساب</span>
 							<div>
-								<FaRegUserCircle fontSize={34} strokeWidth={1} />
+								<AccountCircle fontSize={34} />
 							</div>
 						</div>
 					</div>

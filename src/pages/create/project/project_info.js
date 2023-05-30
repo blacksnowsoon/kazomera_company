@@ -26,124 +26,231 @@ const projectParts = [
 ]
 
 export default function ProjectInfo() {
+
   const [projectPartsState, setProjectParts] = useState(projectParts);
   function checkActive(id) {
     setProjectParts(oldItems => (
       oldItems.map((oldItem) => (
         {...oldItem, isActive: oldItem.id === id ? !oldItem.isActive : oldItem.isActive}
+        // {...oldItem, isActive: true}
       ))
     ))
     return null;
   }
 
-  useEffect(() => {
-    projectPartsState.map((part, i) => (
-      document.getElementById(`part_${part.id}`).style.display = part.isActive ? 'block' : 'none'
-    ))
-  }, [projectPartsState])
 
   return (
     <section className='create-section'>
-			<h3 className="create-section__heading">123</h3>
-      <div className="create-section__body project-section__body">
+			<header>
+        <h3 className="create-section__heading">معلومات المشروع</h3>
         <ul className='items-btns items-btns--blue-active'>
-          {
-            projectPartsState.map(({id, name, isActive}, i) => (
-              <li key={i} onClick={() => checkActive(id)} className={isActive ? "active" : ""}>
-                {name}
-              </li> 
-            ))
-          }
+            {
+              projectPartsState.map(({id, name, isActive}, i) => (
+                <li key={i} onClick={() => checkActive(id)} className={isActive ? "active" : ""}>
+                  {name}
+                </li> 
+              ))
+            }
         </ul>
+      </header>
+      <div className="create-section__body project-section__body">
         {/* create-section__partitions */}
-        <div className="create-section__partitions">
-          <div className="create-section__part" id="part_0">
-            <h3 className="create-section__part-heading">: {projectParts[0].name}</h3>
+        <div className="create-section__partitions project-section__partitions project-section__partitions--info">
+
+          {/* : المنافسين */}
+          <div className="create-section__part" id="part_9">
+            <h4 className="create-section__part-heading">: {projectParts[9].name}</h4>
+            <input placeholder=".......... من هم منافسينك" />
+          </div>
+          
+          {/* : الميزة التنافسية */}
+          <div className="create-section__part" id="part_10">
+            <h4 className="create-section__part-heading">: {projectParts[10].name}</h4>
+            <input placeholder="............ ما هي الأشياء التي تميزك عن منافسينك" />
+          </div>
+
+          {/* : الملفات */}
+          <div className="create-section__part create-section__part--rounded" id="part_11">
+            <h4 className="create-section__part-heading">: {projectParts[11].name}</h4>
+            <div className='files create-section__part--rounded-content'>
+              <label>
+                  <h5>الاسم</h5> 
+                  <input placeholder="اكتب اسمًا يصف الملفات التي تليه" />
+              </label>
+              <label>
+                  <h5>الوصف</h5> 
+                  <input placeholder="..." />
+              </label>
+            </div>
+          </div>
+
+          {/* : الحساب البنكي */}
+          <div className="create-section__part" id="part_12">
+            <h4 className="create-section__part-heading">: {projectParts[12].name}</h4>
             <div className="box">
               <label>
-                <h4>القطاع</h4> 
-                <input placeholder="...... في أي قطاعٍ ينتمي هذا المشروع" />
+                <h5>اسم الحساب</h5> 
+                <input placeholder="......... اكتب اسم حسابك البنكي" />
               </label>
               <label>
-                <h4>المجال</h4> 
-                <input placeholder="...... في أي مجال في هذا القطاع" />
+                <h5>رقم الحساب</h5> 
+                <input placeholder="......... اكتب رقم حسابك البنكي" />
               </label>
               <label>
-                <h4>التخصص</h4> 
-                <input placeholder="........ في أي تخصصٍ في هذا المجال" />
+                <h5>البنك</h5> 
+                <input placeholder="اسم البنك الذي تضع فيه هذا الحساب" />
               </label>
+              
+              <div className='box'>
+                <ul className='items-btns items-btns--blue-active'>
+                  <li>إضافة عنصر</li>
+                </ul>
+              </div>
               <span>111</span>
             </div>
           </div>
 
-          <div className="create-section__part" id="part_1">
-            <h3 className="create-section__part-heading">: {projectParts[1].name}</h3>
-            <input placeholder=" ........ اكتب سطر أو أكثر عن وصف المشروع" />
-            <span>111</span>
+          {/* : المنتجات */}
+          <div className="create-section__part create-section__part--rounded" id="part_13">
+            <h4 className="create-section__part-heading">: {projectParts[13].name}</h4>
+            <div className='create-section__part--rounded-content'>
+              <div className="box">
+                <label>
+                  <h5>اسم المنتج</h5> 
+                  <input placeholder="اكتب اسم المنتج" />
+                </label>
+                <label>
+                  <input placeholder="النوع" />
+                </label>
+                <label>
+                  <h5>السعر الأدنى</h5> 
+                  <input placeholder="0000000000" />
+                </label>
+                <label>
+                  <input placeholder="إنشاء مزاد" />
+                </label>
+              </div>
+              <label>
+                <h5>الوصف</h5> 
+                <input placeholder="اكتب مواصفات المنتج" width={"100%"} />
+              </label>
+              <div className='gallery'>
+                <div className='arrow-left'>&lt;</div>
+                <div className='galls'>
+                  <div className='gall'>
+                    <p>صورة أو فيديو</p>
+                    <p>أو مقطع صوتي</p>
+                    <p>أو ملف عن المنتج</p>
+                  </div>
+                  <div className='gall'>
+                    <p>صورة أو فيديو</p>
+                    <p>أو مقطع صوتي</p>
+                    <p>أو ملف عن المنتج</p>
+                  </div>
+                  <div className='gall'>
+                    <p>صورة أو فيديو</p>
+                    <p>أو مقطع صوتي</p>
+                    <p>أو ملف عن المنتج</p>
+                  </div>
+                  <div className='gall'>
+                    <p>صورة أو فيديو</p>
+                    <p>أو مقطع صوتي</p>
+                    <p>أو ملف عن المنتج</p>
+                  </div>
+                  <div className='gall'>
+                    <p>صورة أو فيديو</p>
+                    <p>أو مقطع صوتي</p>
+                    <p>أو ملف عن المنتج</p>
+                  </div>
+                </div>
+                <div className='arrow-right'>&gt;</div>
+              </div>
+              <div className='create-section__part--rounded-content'>
+                <div className='box'>
+                  <label>
+                    <h5>اسم الهدية</h5> 
+                    <input placeholder="اكتب اسم الهدية" />
+                  </label>
+                </div>
+                <label>
+                  <h5>وصف الهدية</h5> 
+                  <input placeholder="اكتب وصفًا لتلك الهدية" />
+                </label>
+
+
+                <div className='gallery'>
+                <div className='arrow-left'>&lt;</div>
+                <div className='galls'>
+                  <div className='gall'>
+                    <p>صورة أو فيديو</p>
+                    <p>أو مقطع صوتي</p>
+                    <p>أو ملف عن المنتج</p>
+                  </div>
+                  <div className='gall'>
+                    <p>صورة أو فيديو</p>
+                    <p>أو مقطع صوتي</p>
+                    <p>أو ملف عن المنتج</p>
+                  </div>
+                  <div className='gall'>
+                    <p>صورة أو فيديو</p>
+                    <p>أو مقطع صوتي</p>
+                    <p>أو ملف عن المنتج</p>
+                  </div>
+                  <div className='gall'>
+                    <p>صورة أو فيديو</p>
+                    <p>أو مقطع صوتي</p>
+                    <p>أو ملف عن المنتج</p>
+                  </div>
+                  <div className='gall'>
+                    <p>صورة أو فيديو</p>
+                    <p>أو مقطع صوتي</p>
+                    <p>أو ملف عن المنتج</p>
+                  </div>
+                </div>
+                <div className='arrow-right'>&gt;</div>
+              </div>
+            </div>
+          </div>
           </div>
 
-          <div className="create-section__part" id="part_2">
-            <h3 className="create-section__part-heading">: {projectParts[2].name}</h3>
-          </div>
-
-          <div className="create-section__part" id="part_3">
-            <h3 className="create-section__part-heading">: {projectParts[3].name}</h3>
-          </div>
-
-          <div className="create-section__part" id="part_4">
-            <h3 className="create-section__part-heading">: {projectParts[4].name}</h3>
-          </div>
-
-          <div className="create-section__part" id="part_5">
-            <h3 className="create-section__part-heading">: {projectParts[5].name}</h3>
-          </div>
-          <div className="create-section__part" id="part_6">
-            <h3 className="create-section__part-heading">: {projectParts[6].name}</h3>
-          </div>
-          <div className="create-section__part" id="part_7">
-            <h3 className="create-section__part-heading">: {projectParts[7].name}</h3>
-          </div>
-          <div className="create-section__part" id="part_8">
-            <h3 className="create-section__part-heading">: {projectParts[8].name}</h3>
-          </div>
-          <div className="create-section__part" id="part_9">
-            <h3 className="create-section__part-heading">: {projectParts[9].name}</h3>
-          </div>
-          <div className="create-section__part" id="part_10">
-            <h3 className="create-section__part-heading">: {projectParts[10].name}</h3>
-          </div>
-          <div className="create-section__part" id="part_11">
-            <h3 className="create-section__part-heading">: {projectParts[11].name}</h3>
-          </div>
-          <div className="create-section__part" id="part_12">
-            <h3 className="create-section__part-heading">: {projectParts[12].name}</h3>
-          </div>
-          <div className="create-section__part" id="part_13">
-            <h3 className="create-section__part-heading">: {projectParts[13].name}</h3>
-          </div>
+          {/* الماليات */}
           <div className="create-section__part" id="part_14">
-            <h3 className="create-section__part-heading">: {projectParts[14].name}</h3>
+            <h4 className="create-section__part-heading">: {projectParts[14].name}</h4>
           </div>
+
+          {/* الماليات */}
           <div className="create-section__part" id="part_15">
-            <h3 className="create-section__part-heading">: {projectParts[15].name}</h3>
+            <h4 className="create-section__part-heading">: {projectParts[15].name}</h4>
           </div>
+
+          {/* الماليات */}
           <div className="create-section__part" id="part_16">
-            <h3 className="create-section__part-heading">: {projectParts[16].name}</h3>
+            <h4 className="create-section__part-heading">: {projectParts[16].name}</h4>
           </div>
+
+          {/* الماليات */}
           <div className="create-section__part" id="part_17">
-            <h3 className="create-section__part-heading">: {projectParts[17].name}</h3>
+            <h4 className="create-section__part-heading">: {projectParts[17].name}</h4>
           </div>
+
+          {/* الماليات */}
           <div className="create-section__part" id="part_18">
-            <h3 className="create-section__part-heading">: {projectParts[18].name}</h3>
+            <h4 className="create-section__part-heading">: {projectParts[18].name}</h4>
           </div>
+
+          {/* الماليات */}
           <div className="create-section__part" id="part_19">
-            <h3 className="create-section__part-heading">: {projectParts[19].name}</h3>
+            <h4 className="create-section__part-heading">: {projectParts[19].name}</h4>
           </div>
+
+          {/* الماليات */}
           <div className="create-section__part" id="part_20">
-            <h3 className="create-section__part-heading">: {projectParts[20].name}</h3>
+            <h4 className="create-section__part-heading">: {projectParts[20].name}</h4>
           </div>
+
+          {/* الماليات */}
           <div className="create-section__part" id="part_21">
-            <h3 className="create-section__part-heading">: {projectParts[21].name}</h3>
+            <h4 className="create-section__part-heading">: {projectParts[21].name}</h4>
           </div>
 
 

@@ -19,8 +19,10 @@ export default function ProjectSector() {
           <li>حذف</li>
         </ul>
       </header>
-      <ProjectInfo />
-      <ProjectSectionReq />
+      <main className="sector__body">
+        <ProjectInfo />
+        <ProjectSectionReq />
+      </main>
     </div>
   )
 }

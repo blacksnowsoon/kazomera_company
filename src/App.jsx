@@ -21,6 +21,7 @@ import Footer from './components/footer/footer';
 
 import ProjectSector from './pages/create/project/project';
 import ContribSector from './pages/create/contrib/contrib';
+import InvestSector from './pages/create/invest/invest';
 
 
 export default function App() {
@@ -50,6 +51,7 @@ export default function App() {
         <Route path="create" element={<Create />}>
           <Route path="project" element={<ProjectSector />} />
           <Route path="contribution" element={<ContribSector />} />
+          <Route path="investment" element={<InvestSector />} />
         </Route>
         <Route path='*' element={<>No site !!<Link to="/">Go back</Link></>} />
       </Routes>

@@ -33,14 +33,6 @@
     color: #fff;
 }
 
-.nav__item a.active,
-.nav__item:last-of-type a.active path,
-.nav__item:last-of-type:hover path {
-    stroke: #fff;
-}
-
-
-
 
 
 

@@ -1,35 +1,63 @@
 
-
+:root {
+    --radius-size: 15px;
+}
 
 /* Start first section of project sector */
-.project-sector__header ul:last-of-type li {
-    background-color: #fff;
-    color: var(--clr-brown)
-}
-
-.project-section__body {
-    padding: 10px;
-}
-
-.project-section__body input {
-    padding: 10px;
-    border-radius: 15px;
-    border: 1px solid var(--clr-brown);
-    width: 100%;
-}
+/* Start firs tpart of sections' project sector */
 
 
 
-/* Start first part */
-.project-section__partitions #part_0 .box, label {
+/* Start a part */
+.project-section__partitions .members {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
-/* Start first part */
-/* Start first part */
-/* Start first part */
+
+.project-section__partitions .members .member {
+    display: grid;
+    grid-template-rows: 200px auto;
+    width: 240px;
+    height: 290px;
+    color: #65676B;
+    border: 1px solid var(--clr-brown);
+    border-radius: var(--radius-size);
+    overflow: hidden;
+    color: #65676B;
+}
+
+.project-section__partitions .members figcaption {
+    padding: 15px 5px;
+    border-top: 1px solid;
+}
+
+
+.project-section__partitions .member h5 {
+    font-weight: 600;
+    color: #000;
+}
+
+.project-section__partitions .member p {
+    margin-top: 10px;
+    text-indent: 10px;
+}
+
+
+.project-section__partitions .files label:first-of-type input {
+    width: 225px;
+}
+
+
+/* Start Products part */
+.project-section__partitions .products {
+    border-radius: var(--radius-size);
+    padding: 20px 15px;
+}
+
+.project-section__partitions .products > *{
+    margin-block: 15px;
+}
 /* Start first part */
 /* Start first part */
 /* Start first part */

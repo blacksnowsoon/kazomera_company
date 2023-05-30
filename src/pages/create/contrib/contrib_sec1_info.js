@@ -22,22 +22,25 @@ export default function ContribSecInfo() {
 
   return (
     <section className="create-section">
-			<h3 className='create-section__heading'>123</h3>
-      <div className="create-section__body project-sector__body">
+      <header>
+        <h3 className='create-section__heading'>123</h3>
         <ul className='items-btns items-btns--blue-active'>
-          {
-            projectPartsState.map(({id, name, isActive}, i) => (
-              <li key={i} onClick={() => checkActive(id)} className={isActive ? "active" : ""}>
-                {name}
-              </li> 
-            ))
-          }
+            {
+              projectPartsState.map(({id, name, isActive}, i) => (
+                <li key={i} onClick={() => checkActive(id)} className={isActive ? "active" : ""}>
+                  {name}
+                </li> 
+              ))
+            }
         </ul>
-        <div className="project__partitions">
+      </header>
+      <div className="create-section__body project-sector__body">
 
-          <div className="project__part" id="part_0">
-            <h3 className="project__part-heading">: {projectParts[0].name}</h3>
-            <div className="project__part-content">
+        <div className="create-section__partitions contrib-section__partitions contrib-section__partitions--info">
+
+          <div className="create-section__part" id="part_0">
+            <h4 className="create-section__part-heading">: {projectParts[0].name}</h4>
+            <div className="box">
               <label>
                 <span>القطاع</span> 
                 <input placeholder="...... في أي قطاعٍ ينتمي هذا المشروع" />
