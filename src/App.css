@@ -1,3 +1,27 @@
+/* the App.css file containes all created classes as globals and reuusable
+    do not place in here any private style variables or classes  */
+/*  the id of root app container */
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+/* active btns background effect */
+.active {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+/* this collapsed style applay for toogle btns in general */
+.collapsed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+[data-toggle="collapse"].collapsed .if-not-collapsed,
+[data-toggle="collapse"]:not(.collapsed) .if-collapsed {
+  display: none;
+}
+
 :root {
     --round-acirc: 21px;
     --round-middle: 14px;
@@ -15,9 +39,7 @@
 
 }
 
-.r {
-  direction: rtl;
-}
+
 
 .all-center {
     display: flex;
@@ -27,11 +49,6 @@
 
 .main-direction {
   direction: rtl;
-}
-
-.active {
-  background-color: var(--clr-brown);
-  color: #fff;
 }
 
 .error {
@@ -86,10 +103,6 @@ ul.items-btns--black li:hover {
 
 
 
-main {
-  min-height: 100vh;
-  margin-top: 25px;
-}
 
 /* .container {
   width: 100%;

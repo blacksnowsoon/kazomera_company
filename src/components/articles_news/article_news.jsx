@@ -9,7 +9,7 @@ import '../article/article.css';
 export default function ArticleNews({heading}) {
   return (
     <div className='article'>
-      <ArticleHeader />
+      {/* <ArticleHeader /> */}
       <div className='article__body'>
         <p>سطر مكتوب عن شئ عن استثمار</p>
         <div className='article__content'>

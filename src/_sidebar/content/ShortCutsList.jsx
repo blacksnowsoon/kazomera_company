@@ -1,24 +1,22 @@
-// This is a projects' compoenent only used on it;
-
+import './shortcuts.css';
 import React from 'react';
 import { GiClosedBarbute } from 'react-icons/gi';
-import './menuMine.css';
 import { Link } from 'react-router-dom';
 
-const mainMenu = [
+const userRoutesList = [
     {icon: '', title: 'مشروعاتي', to:'projects'},
     {icon: '', title: 'مساهماتي', to:'contributions'},
     {icon: '', title: 'استثماراتي', to:'investments'},
     {icon: '', title: 'ثفقاتي', to:'deals'},
   ]
 
-const favMenu = [
+const userRoutesSavedData = [
     {icon: '', title: 'اهتماماتي', to:'interests'},
     {icon: '', title: 'شبكة علاقاتي', to:'relations'},
     {icon: '', title: 'العناصر المحفوظة', to:'reserved'},
 ]
 
-const pagesMenu = [
+const UserLoginInfo = [
   {icon: '', title: 'تسجيل الدخول', to:'/account/login'},
   {icon: '', title: 'الحساب', to:'/profile'},
   {icon: '', title: 'المتطلبات', to:'/requieres'},
@@ -44,10 +42,10 @@ function itemsCreator(list) {
 export default function menuMine() {
   return (
     <div className='projects__right-menu'>
-      <ul className='projects__right-main-menu'>{itemsCreator(mainMenu)}</ul>
-      <ul className='projects__right-fav-menu'>{itemsCreator(favMenu)}</ul>
-      <p style={{marginBottom: "10px"}}>صفحة: </p>
-      <ul className='projects__right-pages-menu'>{itemsCreator(pagesMenu)}</ul>
+      
+      <ul className='projects__right-main-menu'>{itemsCreator(userRoutesList)}</ul>
+      <ul className='projects__right-fav-menu'>{itemsCreator(userRoutesSavedData)}</ul>
+      
     </div>
   )
 }

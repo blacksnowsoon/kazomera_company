@@ -1,6 +1,6 @@
 import './profile.css';
 
-import MainNav from '../../components/nav_main/mainNav'
+import MainNav from '../../components/header_second/nav_main/mainNav'
 import MinHeader from '../../components/header_minimum/minHeader';
 import Notifications from '../../components/notifications_section/notific'
 import Correspondence from '../../components/correspondence_section/corresp'

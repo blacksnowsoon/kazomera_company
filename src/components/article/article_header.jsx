@@ -12,7 +12,7 @@ export default function ArticleHeader({heading}) {
   const items = () => ['المجال', 'التصنيف', 'المرحلة', 'الموقع', 'المتطلبات'].map((item, i) => <li key={i}>{item}</li>)
 
   return (
-      <header className='article__header'>
+      <div className='article__header'>
         <ul className='article__header-tools-items items-btns'>
           <li className='article__header-tools-more' 
               onMouseEnter={() => setClosed(false)}
@@ -31,6 +31,6 @@ export default function ArticleHeader({heading}) {
         <div className='article__header-data-label' style={{position: "absolute", display: isClosed ? "none":"block"}}>
           <ul className='article__header-tools-items items-btns'>{items()}</ul>
         </div>
-      </header>
+      </div>
   )
 }

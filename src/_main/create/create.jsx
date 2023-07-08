@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import MinHeader from "../../components/header_minimum/minHeader";
-import MainNav from "../../components/nav_main/mainNav";
+import MainNav from "../../components/header_second/nav_main/mainNav";
 import "./create.css";
 
 import { AccountCircle } from "../../assets/svgs";
