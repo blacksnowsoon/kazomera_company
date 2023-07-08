@@ -1,8 +1,8 @@
 /* this index file contains all tags seclectors try to not use any or put tags selector any where else
     in the project */
 :root {
-  --accent: #cd5c5c;
-  --primary: #eeeeee;
+  --accent: #4d7e7e;
+  --primary: #ffffff;
   --secondary: #282526;
   --main-dirction: rtl;
   --font-size: 1rem;
@@ -26,6 +26,7 @@
 }
 html {
   scroll-behavior: smooth;
+  scroll-snap-stop: always;
 }
 * {
   -webkit-box-sizing: border-box;
@@ -39,6 +40,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--clr-main);
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 main {
@@ -50,16 +52,7 @@ ul {
   list-style: none;
   padding: 0;
 }
-
 a {
   text-decoration: none;
-  color: #F2F3F5;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  /* font-weight: 400; */
+  color: var(--primary);
 }

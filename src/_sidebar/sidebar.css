@@ -28,7 +28,6 @@
 .slide-reverse-flex {
   flex-direction: row-reverse;
 }
-
 .user-info-container {
   color: var(--primary);
   letter-spacing: 1px;
@@ -38,11 +37,12 @@
   margin-top: 1rem;
 }
 .profile-complete-bar {
-  padding-inline: 1rem;
   display: grid;
   grid-template-areas: "lable lable lable lable lable" 
-                        " bar bar bar bar persentage" ; 
+                        " bar bar bar bar persentage"
+                        "note note note note note"; ; 
   gap: .5rem;
+  padding-right: 1rem;
 
 }
 .title-complete {
@@ -51,9 +51,9 @@
   text-align: start;
 }
 .presentage-complete {
-  letter-spacing: 2px;
   grid-area: persentage;
   text-align: end;
+  padding-left: 1rem;
 }
 .percentage-bar {
   grid-area: bar;
@@ -79,10 +79,9 @@
   }
 }
 .user-info-small{
-  /* padding-inline-end: 1rem; */
+  grid-area: note;
+  text-align: start;
 }
-
-
 .user-shortcuts-parent-list {
   text-align: right;
   padding: .5rem;
@@ -90,11 +89,10 @@
   
 }
 .shortcut-p-item {
-  padding-block: .5rem;
+  /* padding-block: .5rem; */
 }
 
 .user-shortcuts-nested-list {
-  /* outline: 1px solid green; */
   padding: .5rem;
 }
 .shortcut-nested-item {
@@ -103,12 +101,11 @@
 }
 .user-shortcut-link {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
   font-size: 1em;
   font-weight: bold;
   letter-spacing: 1px;
   line-height: 1.8rem;
-  /* outline: 1px solid ; */
   padding: .5rem;
   transition: all 500ms ease-in-out;
 }
