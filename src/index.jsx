@@ -1,22 +1,41 @@
+import './index.css';
+import './App.css'
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import { createRoot } from 'react-dom/client';
-import { Provider } from 'react-redux';
-import { store } from './app/store';
+// react router dom imports 
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import App from './App';
-import './index.css';
-import './assets/css/normalize.css'; 
+// pathes imports
+import Home from './_main/home/Home';
+
+// import './assets/css/normalize.css'; 
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    children: [
+      {
+        index: true,
+        path: '/',
+        element: <Home />,
+      }
+    ]
+  }
+])
 
 const container = document.getElementById('root');
 const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </BrowserRouter>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
+
+    // <BrowserRouter>
+    //   <Provider store={store}>
+    //     <App />
+    //   </Provider>
+    // </BrowserRouter>

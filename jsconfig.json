@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "isolatedModules": false
+  },
+  
+  "include": ["src"],
+  "exclude": ["node_modules", "public"]
+}

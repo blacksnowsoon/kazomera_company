@@ -2,7 +2,7 @@ import { useState } from 'react'
 import MinHeader from '../../components/header_minimum/minHeader'
 import Notifications from '../../components/notifications_section/notific'
 
-import MainNav from '../../components/nav_main/mainNav'
+import MainNav from '../../components/header_second/nav_main/mainNav'
 import Correspondence from '../../components/correspondence_section/corresp'
 import './reserved.css';
 
