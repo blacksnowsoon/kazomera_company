@@ -6,3 +6,6 @@
     ** isolate the blocks in the components as much as you can by diviving the components to small blocks and make reusable.
     ** all the helper functions will be placed in the utiles folder.
     ** do not delete files just write ate the top for the fill this need to be deleted.
+
+# Git Commands
+    * $ git fetch 
