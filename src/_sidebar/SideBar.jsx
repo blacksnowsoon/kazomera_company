@@ -60,7 +60,7 @@ const SideBar = props => {
     <nav className={['sidebar-container', isOpen ? 'slide-move-right' : ''].join(" ")}>
       <ToggleMenu onClick={() => setIsOpen(!isOpen)} isOpen={isOpen} />
       <UserInfo />
-      <UserShortcuts isOpen={isOpen}/>
+    <UserShortcuts isOpen={isOpen}/>
       {/* <MainMenu /> */}
     </nav>
   )

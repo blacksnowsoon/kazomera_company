@@ -4,10 +4,13 @@
 #root {
   margin: 0 auto;
   text-align: center;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  
 }
 /* active btns background effect */
 .active {
-  background-color: var(--secondary);
+  background-color: var(--focus);
   color: var(--primary);
 }
 /* this collapsed style applay for toogle btns in general */
@@ -22,84 +25,7 @@
   display: none;
 }
 
-:root {
-    --round-acirc: 21px;
-    --round-middle: 14px;
-    --rounded: 7px;
 
-    --section-width-5: 250px;
-    --section-width-3: 225px;
-    --width-section: 225px;
-    
-    --section-width-1: 200px;
-    --width-adds: 200px;
-
-    --border-clr-light: #bbb;
-    --border-clr-lighter: #c6c8d1;
-
-}
-
-
-
-.all-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-}
-
-.main-direction {
-  direction: rtl;
-}
-
-.error {
-  font-size: 10px;
-  color: red;
-  padding-inline: 5px;
-}
-
-
-.btn,
-ul.items-btns li {
-  padding: 8px;
-  border-radius: 15px;
-  border: 1px solid var(--clr-brown);
-  background-color: var(--clr-brown);
-  color: #fff;
-  cursor: pointer;
-}
-
-.btn:hover,
-ul.items-btns li:hover {
-  background-color: #7b7a7a;
-}
-.btn:active,
-ul.items-btns li:active {
-  transform: scale(.96);
-}
-
-
-ul.items-btns--blue-active a.active,
-ul.items-btns--blue-active li.active {
-  background-color: blue !important;
-}
-
-ul.items-btns--blue-active a.active:hover,
-ul.items-btns--blue-active li.active:hover {
-  background-color: rgb(5, 5, 232) !important;
-}
-
-
-ul.items-btns--black li {
-  background-color: black;
-  border: 1px solid #000;
-}
-ul.items-btns--black li a {
-  color: #fff;
-}
-
-ul.items-btns--black li:hover {
-  background-color: #252525;
-}
 
 
 

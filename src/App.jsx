@@ -1,11 +1,11 @@
 import React, {useContext, createContext, useState} from 'react';
 import { Outlet } from 'react-router-dom';
-
+import SideBar from './_sidebar/SideBar';
 //  make sure to divid the imports to 2 sections at the top the packages imports
 //  then below the generated modules and componenets
 // just to make the code orginized and easy to read
 
-import NavBar from './_headers/NavBar';
+import NavBar from './_headers/Header';
 
 
 const AppContext = createContext().Provider;
@@ -20,11 +20,15 @@ const [user, setUser] = useState(null);
       <header>
         <NavBar />
       </header>
+
+      <aside className='right-sidebar'><SideBar /></aside>
+      
       <main>
         <Outlet />
       </main>
-      <footer>
 
+
+      <footer>
       </footer>
     </AppContext>
   );
