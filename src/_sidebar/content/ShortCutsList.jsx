@@ -1,4 +1,3 @@
-import './shortcuts.css';
 import React from 'react';
 import { GiClosedBarbute } from 'react-icons/gi';
 import { Link } from 'react-router-dom';

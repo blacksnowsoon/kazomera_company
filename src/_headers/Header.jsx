@@ -1,5 +1,5 @@
 import React from 'react'
-import MainNav from './below-nav/mainNav';
+
 import TopNav from './top-nav/topNav';
 
 // this component incloud the 2 components at the top of the pages
@@ -8,10 +8,7 @@ import TopNav from './top-nav/topNav';
 
 const NavBar = () => {
   return (
-    <>
-      <TopNav />
-      <MainNav />
-    </>
+    <TopNav />
   )
 }
 

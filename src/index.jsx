@@ -1,5 +1,6 @@
 import './index.css';
-import './App.css'
+import './App.css';
+
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 // react router dom imports 
@@ -8,7 +9,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
 // pathes imports
 import Home from './_main/home/Home';
-
+import ArticlesInvestments from './components/articles_investments/article_invest'
 // import './assets/css/normalize.css'; 
 
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
         index: true,
         path: '/',
         element: <Home />,
+      },
+      {
+        element: <ArticlesInvestments />,
+        path: '/investment',
       }
     ]
   }

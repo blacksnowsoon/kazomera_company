@@ -31,60 +31,7 @@
 }
 
 
-@media (max-width: 1500px) {
-    .home__body {
-        grid-template-columns: 1fr 2fr 1fr;
-    }
-    .home__leftside .notific {
-        display: none;
-    }
-    .home .header--second__options {
-        visibility: hidden;
-    }
-    .home__leftside .adds {
-        width: 100%;
-    }
-    .home__rightside {
-        justify-content: flex-end;
-    }
-
-    .home__rightside .adds {
-        display: none;
-    }
-
-}
-
-@media (max-width: 1200px) {
-    .home .header--second {
-        font-size: .625rem;
-    }
-    .home .header--second__daul-item {
-        font-size: .750rem !important;
-    }
-    .home .nav__items img {
-        width: 25px;
-    }
-    .home .nav__items a {
-        font-size: 25px;
-    }
-}
-
-@media (max-width: 991px) {
-    .home__body {
-        grid-template-columns: 1fr 2fr;
-        margin-top: 25px;
-    }
-    .home__rightside {
-        display: none;
-    }    
-}
 
 
-@media (max-width: 776px) {
-    .home__body {
-        grid-template-columns: 1fr;
-    }
-    .home__leftside {
-        display: none;
-    }
-}
+
+

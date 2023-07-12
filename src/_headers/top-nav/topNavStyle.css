@@ -1,15 +1,12 @@
 /* styles of the top nav header */
-header {
-  position: sticky;
-  top: -110px;
-}
+
 .header--main {
-  padding-block: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
   gap: 10px;
-  background: var(--accent);
 }
 /* logo styles the header--right container */
 .header--right {
@@ -25,7 +22,6 @@ header {
   font-size: large;
   font-weight: 600;
   letter-spacing: 2px;
-  color: var(--primary);
 }
 /* ----------------------------------------------------------- */
 /* search bar styles header--center container */
@@ -35,8 +31,6 @@ header {
 }
 .search-icon {
   text-align: center;
-  background: "#ffffff";
-  background-color: var(--secondary);
   outline: transparent;
   border: none;
   min-width: 3rem;
@@ -46,14 +40,13 @@ header {
 .search--box {
   font-size: 1.2em;
   padding: .5rem;
-  direction: rtl;
   border-top-left-radius: .5rem;
   border: none;
   width:100%;
   min-height: 2.75rem;
 }
 .search--box:focus {
-  outline: 1px solid var(--secondary);
+  outline: 1px solid ;
 }
 /* ----------------------------------------------------------- */
 /* language and user notifications styles header--left container */
@@ -68,7 +61,7 @@ header {
 .language--options span {
   flex: 1;
   display: flex;
-  border: 1px solid var(--primary);
+  border: 1px solid ;
   cursor: pointer;
   min-height: 2.75rem;
   justify-content: center;
@@ -82,7 +75,7 @@ header {
   
 }
 .notifications--options {
-  outline: 1px solid var(--primary);
+  outline: 1px solid;
   border-radius: 25%;
   width: 3rem;
 }

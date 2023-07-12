@@ -60,7 +60,7 @@ const SideBar = props => {
     <nav className={['sidebar-container', isOpen ? 'slide-move-right' : ''].join(" ")}>
       <ToggleMenu onClick={() => setIsOpen(!isOpen)} isOpen={isOpen} />
       <UserInfo />
-      <UserShortcuts isOpen={isOpen}/>
+    <UserShortcuts isOpen={isOpen}/>
       {/* <MainMenu /> */}
     </nav>
   )
@@ -89,13 +89,14 @@ const UserInfo =()=> {
           <img alt="user" src={require('../assets/site-logos/logo.png')} />
           <p>user name</p>
         </div>
+
         <div className='profile-complete-bar'>
           <h5 className='title-complete'>الملف الشخصي مكتمل بنسبة</h5>
           <p className='presentage-complete'>65%</p>
           <div className='percentage-bar'></div>
+          <small className='user-info-small'>اكتمال الملف الشخصى يزيد الفرص</small>
         </div>
         
-      <small className='user-info-small'>اكتمال الملف الشخصى يويد الفرص</small>
       </div>
     </>
     
@@ -128,6 +129,10 @@ const UserShortcuts = ({isOpen}) => {
           })
         }
       </ul>
+      <div>
+        <small>سياسة الخصوصية وشروطاذلاستخدام</small><br/>
+        <small>جميع الحقوق محفوظة kazomera ©2023</small>
+      </div>
     </div>
   )
 }
