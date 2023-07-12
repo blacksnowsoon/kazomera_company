@@ -18,4 +18,5 @@
     from the branch to merge your code with the base code.
     * in the pull requiest you have 2 lables at the top right like in the image below 
     * you should add me in the assignees and abdelfatah in the reviewers 
-![pull reqquist image]("/src/assets/pullrequiest.png")
+
+![pull reqquist image](https://github.com/blacksnowsoon/kazomera_company/blob/master/src/assets/pullrequiest.png?raw=true)
