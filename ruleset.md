@@ -8,4 +8,14 @@
     ** do not delete files just write ate the top for the fill this need to be deleted.
 
 # Git Commands
-    * $ git fetch 
+
+    - first thing you will do is to fork he repo to your account
+    - second colne the repo to your machien 
+    
+    * before you start coding very important to create new branch
+    * you will do this step everytime you will contribute lets name the branches with the name of the task you working on.
+    * after making the changes push your code to your repo in github then create a pull requiest
+    from the branch to merge your code with the base code.
+    * in the pull requiest you have 2 lables at the top right like in the image below 
+    * you should add me in the assignees and abdelfatah in the reviewers 
+![pull reqquist image]("/src/assets/pullrequiest.png")
