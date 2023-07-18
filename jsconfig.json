@@ -3,7 +3,7 @@
     "baseUrl": "./src",
     "isolatedModules": false
   },
-  
-  "include": ["src"],
+
+  "include": ["src", "public/app_structure .js"],
   "exclude": ["node_modules", "public"]
 }

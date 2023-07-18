@@ -1,4 +1,4 @@
-export const siteStructure = (lang) => {
+export default function siteStructure(lang) {
   return {
     firstNav: {
       logo: {
@@ -55,60 +55,58 @@ export const siteStructure = (lang) => {
       ],
     },
     sideNav: {
+      createMenu: [
+        {
+          id: 1,
+          icon: "IoIosAddCircleOutline",
+          title: lang === "ar" ? "إنشاء مشروع" : "Project establishment",
+          to: "/create",
+        },
+        {
+          id: 2,
+          icon: "IoIosAddCircleOutline",
+          title: lang === "ar" ? "تقديم مساهمة" : "Make a contribution",
+          to: "/contribute",
+        },
+      ],
       sideMenu: [
         {
-          icon: "",
+          id: 1,
+          icon: "TbSquareLetterP",
           title: lang === "ar" ? "مشروعاتي" : "My projects",
-          to: "projects",
+          to: "/projects",
         },
         {
-          icon: "",
+          id: 2,
+          icon: "FaRegHandshake",
           title: lang === "ar" ? "مساهماتي" : "My contributions",
-          to: "contributions",
+          to: "/contributions",
         },
         {
-          icon: "",
-          title: lang === "ar" ? "استثماراتي" : "My investments",
-          to: "investments",
-        },
-        {
-          icon: "",
+          id: 3,
+          icon: "SiHandshake",
           title: lang === "ar" ? "صفقاتي" : "My deals",
-          to: "deals",
+          to: "/deals",
         },
       ],
       interestsMenu: [
         {
-          icon: "",
-          title: lang === "ar" ? "اهتماماتي" : "My interests",
-          to: "interests",
+          id: 1,
+          icon: "HiOutlineStar",
+          title: lang === "ar" ? "اهتماماتي" : "Interests",
+          to: "/interests",
         },
         {
-          icon: "",
-          title: lang === "ar" ? "شبكة علاقاتي" : "My relations",
-          to: "relations",
+          id: 2,
+          icon: "HiOutlineUserGroup",
+          title: lang === "ar" ? "شبكة علاقاتي" : "Connections",
+          to: "/relations",
         },
         {
-          icon: "",
+          id: 3,
+          icon: "CiBookmark",
           title: lang === "ar" ? "العناصر المحفوظة" : "Saved items",
-          to: "reserved",
-        },
-      ],
-      signMenu: [
-        {
-          icon: "",
-          title: lang === "ar" ? "تسجيل الدخول" : "Login",
-          to: "/login",
-        },
-        {
-          icon: "",
-          title: lang === "ar" ? "الحساب" : "Profile",
-          to: "/profile",
-        },
-        {
-          icon: "",
-          title: lang === "ar" ? "المتطلبات" : "Requieres",
-          to: "/requieres",
+          to: "/reserved",
         },
       ],
     },
@@ -714,7 +712,7 @@ export const siteStructure = (lang) => {
           },
         ],
       },
-      description: {
+      description1: {
         placeholder: "التفاصيل",
       },
 
@@ -1053,4 +1051,4 @@ export const siteStructure = (lang) => {
       ],
     },
   };
-};
+}

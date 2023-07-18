@@ -1,3 +1,35 @@
+:root {
+    --bg-color: #E4E6EB;
+    --text-color: #050505;
+    --border-color: #707070;
+}
+
 .sidebar-container {
-  
+    padding: 5px 15px;
+}
+
+
+.shortcut {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.shortcut__icon {
+    width: 20px;
+    height: 20px;
+    background-color: cornflowerblue;
+    border-radius: 50%;
+}
+
+.shortcut__title {
+    font-size: 16px;
+    color: var(--text-color);
+    font-weight: normal;
+}
+
+hr {
+    margin: 15px 0;
 }

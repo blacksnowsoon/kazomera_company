@@ -1,12 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import { Link } from "react-router-dom";
 
-const shortcut = props => {
+const Shortcut = ({ title, to }) => {
   return (
-    <div>shortcut</div>
-  )
-}
+    <Link to={to} className="shortcut">
+      <div className="shortcut__icon"></div>
+      <h3 className="shortcut__title">{title}</h3>
+    </Link>
+  );
+};
 
-shortcut.propTypes = {}
-
-export default shortcut
+export default Shortcut;
