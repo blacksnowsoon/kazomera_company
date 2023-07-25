@@ -5,7 +5,7 @@ import SideBar from './_sidebar/SideBar';
 //  then below the generated modules and componenets
 // just to make the code orginized and easy to read
 
-import NavBar from './_headers/Header';
+import NavBar from './app/_headers/Header';
 
 
 const AppContext = createContext().Provider;
