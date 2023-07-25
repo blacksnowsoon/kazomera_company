@@ -1,113 +1,58 @@
-// this top nav will be refactore by yassser 
-// pleas delete all the styles and the components
-// stuck with the design provided by eng.abdelfatah for now
-// before start coding look at the ruleset.md file 
-// and keep in mind the design good luck
-// after finishing the design push it to github
-
-import './topNavStyle.css';
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-
-//  created modules
-import logo from '../../../assets/site-logos/logo-address.png'
-import Icon from '../../../components/icons/_react-icons';
+import { AiOutlineSearch } from "react-icons/ai";
+import { routes, services } from "./topNavServices";
+import { NavLink } from "react-router-dom";
+// css
+import classes from "./topNavs.module.css";
 
 // note the menu in responsive disgn not yet stylyed
+// #00 still left
+// #01 responsive disgn
+// #02 fill react icons when we are on the same page that the icon refers to
 
-//  top nav component has :
-// logo-notifications-searchbar-menuBtn for responsive design.
-// the setting icon need to refactoring 
-
-const meddleMenuContent = [
-  {name: "أخبار", route:'/', ele:<Icon name="BsNewspaper" size={30}/>, className: "link-news"},
-  {name: "استثمارات", route:'/investments', ele:<Icon name="BsFillBarChartLineFill" size={30}/>, className: "link-invest"},
-  {name: "كازوميرا", route:'/kazomera', ele:<img alt="kazomera" src={logo} className= "logo-link" />, className: "link-kazomera"},
-  {name: "مساهمات", route:'/contributions', ele:<Icon name='BsCoin' size={30}/>, className: "contribut"},
-  {name: "مشروعات", route:'/projects', ele:<Icon name='BsPSquare' size={30}/>, className: "link-projects"},
-]
-
-function TopNav() {
-  const [isSetting, setSetting] = React.useState(false);
-  const [isMenu, setMenu] = React.useState(false);
+const TopNavs = () => {
   return (
-    <>
-      <nav className='header--main'>
-      {/* logo and menu btn */}
-        <div className='header--right'>
-          <i className='menu-icon' style={{display: 'none'}} onClick={() => setMenu(true)}>
-            <Icon name='FcMenu' />
-          </i>
-          <div className='logo--container'>
-            <Link className='logo--link' to="/">
-              <img alt="site-main-logo" src={logo} />
-            </Link>
-          </div>
-          <h5 className='slogon'>KAZOMERA</h5>
+    <div className={classes.top_nav} dir="ltr">
+      <div className={classes.wrapper}>
+        {/* flex-1 */}
+        <div className={classes.icons_wrapper}>
+          {services.map(({ icon, name }, idx) => (
+            <button className={classes.icons_btn}>{icon}</button>
+          ))}
         </div>
-        {/* search bar */}
-        <div className='header--center'>
-          <div className='search--container'>
-            <button className='search-icon' title='بحث' onClick={() => setSetting(true)}>
-            <Icon name="BsSearch" />
-            </button>
-            <input 
-            type='search' 
-            className='search--box' 
-            placeholder='بحث' 
-            autoComplete='on' 
-            autoCorrect='on'
-            datatype='text' />
-          </div>
-          <ul>
-          <li>
-            <Link to={'/'}>News</Link>
-          </li>
-          <li>
-            <Link to={'/investments'}>Investments</Link>
-          </li>
-          <li>
-            <Link to={'/projects'}>Projects</Link>
-          </li>
-          </ul>
+        {/* Links */}
+        <div className={classes.links_wrapper}>
+          {routes.map(({ name, route, icon }, idx) => (
+            <NavLink
+              key={idx}
+              style={{ height: "100%" }}
+              to={route}
+              className={({ isActive }) => isActive && classes.active}
+              end
+            >
+              <div className={classes.link}>
+                {icon}
+                <h4>{name}</h4>
+              </div>
+            </NavLink>
+          ))}
         </div>
-        {/* user notification and language options */}
-        <div className='header--left'>
-          <div className='language--options'>
-              <span title='English' data-toggle="en">EN</span>
-              <span title='عربي' data-toggle="ar" className='active'>عربي</span>
+        {/* flex-1 */}
+        <div className={classes.logo_wrapper}>
+          <div className={classes.serch_bar}>
+            <div className={classes.serch_btn}>
+              <AiOutlineSearch size={24} />
+            </div>
+            <input
+              dir="rtl"
+              placeholder="بحث ...."
+              className={classes.serch_input}
+            />
           </div>
-          <div 
-            title='الأشعارات'
-            className='notifications--options collapsed' 
-            data-toggle="collapse">
-              <Icon name='BsBell' color={'black'} className={["if-collapsed"]} size={30}/>
-              <Icon name='BsBellFill' color={'black'} className={["if-not-collapsed"]} size={30}/>
-          </div>
+          <h3 className={classes.logo}>Kazomera</h3>
         </div>
-      </nav>
-      {/* {isMenu && <Menu isMenu={isMenu} setMenu={setMenu} />} */}
-    </>
-  )
-}
+      </div>
+    </div>
+  );
+};
 
-
-export default TopNav;
-
-export  function MainNav() {
-  return (
-      
-        <ul className='nav--items'>
-          {
-            meddleMenuContent.map((item, i) => (
-              <li key={i} className="nav-item">
-                <Link to={item.route} title={item.name} className={item?.className}>
-                  {item.ele}
-                </Link>
-              </li>
-            ))
-          }
-        </ul>
-  )
-}
+export default TopNavs;

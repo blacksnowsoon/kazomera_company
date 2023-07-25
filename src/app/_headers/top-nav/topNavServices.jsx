@@ -26,7 +26,7 @@ export const routes = [
   },
   {
     name: "الأخبار",
-    route: "/",
+    route: "/news",
     icon: <GrHomeRounded size={30} />,
   },
 ];

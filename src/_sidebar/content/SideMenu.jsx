@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import siteStructure from "app_structure ";
-import Shortcut from "./Shortcut";
+import Shortcut from "./shortcut";
 import "../sidebar.css";
 
 const SideMenu = () => {
