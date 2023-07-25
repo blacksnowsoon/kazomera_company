@@ -1,0 +1,23 @@
+.textarea {
+  --height: 1.7rem;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  background: var(--background);
+  outline: transparent;
+  height: var(--height);
+  padding: .5rem;
+  border: none;
+  overflow: hidden;
+  direction: var(--site-dirction);
+  font-size: 1.1em;
+  transition: all 500ms;
+  font-weight: 600;
+}
+.textarea:focus {
+  --height: 6.25rem;
+}
+.post-image-container {
+  display: block;
+  height: 130px;
+  background: yellow;
+}

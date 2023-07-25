@@ -1,0 +1,120 @@
+.account {
+    min-height: 100vh;
+    display: grid;
+    /* grid-template-rows: auto 1fr; */
+}
+
+/* .account__header {
+    background-color: #fff;
+} */
+
+.account__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.account__box {
+    flex: 1;
+    max-width: 500px;
+    padding: 2.5em 1.5em;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 3px 2px #000;
+}
+
+.account .heading {
+    margin-bottom: 1.25rem;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.form {
+    display: grid;
+    gap: 1rem;
+}
+
+.form button,
+.form input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 1rem;
+    border: 1px solid var(--clr-brown);
+}
+
+.form input:focus {
+    outline: 2px solid #ddd;
+    border-color: #ddd;
+}
+
+.form input::placeholder {
+    transition: .3s;
+    text-transform: capitalize;
+}
+
+.form input:focus::placeholder {
+    font-size: .8em;
+    transform: translate(0, -110%);
+}
+
+.form button {
+    font-size: 1.25em;
+    width: fit-content;
+    padding-inline: 2.5rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    background-color: var(--clr-brown);
+    color: #fff;    
+    font-family:'Courier New', Courier, monospace;
+}
+
+.form button:hover {
+    box-shadow: 0 3px 1px #000;
+    border-color: #000;
+}
+
+.form button:active {
+    font-size: .9rem;
+}
+
+.recover__form button {
+    width: 100%;
+}
+
+
+
+.account a {
+    display: block;
+    width: fit-content;
+    padding: 5px;
+}
+
+.account a:hover {
+    box-shadow: 0 3px 1px #000;
+}
+
+.account h2 {
+    margin: 30px 5px 0;
+    text-align: center;
+    font-size: 2em;
+    animation: trans .5s ease-in-out;
+}
+
+.successed {
+    color: green;
+}
+
+.faild {
+    color: red;
+}
+
+@keyframes trans {
+    50% {
+        transform: scale(1.2);
+    }
+
+    0%, 100% {
+        transform: scale(1);
+
+    }
+}
