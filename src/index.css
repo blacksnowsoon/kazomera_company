@@ -7,7 +7,8 @@
   --text: #0e0d0b;
   --error: #f70707;
   --focus: #838482;
-  --active: #b4b3b3
+  --active: #b4b3b3;
+  --background: #F0F0F0F0;
   --site-dirction: rtl;
   --font-size: 1rem;
   line-height: 1.5;
@@ -30,10 +31,10 @@
     --round-acirc: 21px;
     --round-middle: 14px;
     --rounded: 7px;
---clr-main: #E4E6EB;
-  --clr-brown: #707070;
-  --clr-brown-light: #707070bb;
-  --clr-ligh: #F2F3F5;
+    --clr-main: #E4E6EB;
+    --clr-brown: #707070;
+    --clr-brown-light: #707070bb;
+    --clr-ligh: #F2F3F5;
     --section-width-5: 250px;
     --section-width-3: 225px;
     --width-section: 225px;

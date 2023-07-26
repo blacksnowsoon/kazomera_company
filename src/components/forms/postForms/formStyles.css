@@ -1,0 +1,40 @@
+.post-form-container {
+  --height: 2rem;
+  position: relative;
+  overflow-y: hidden;
+  height: var(--height);
+  transition: all 500ms;
+}
+.textarea {
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  background: var(--background);
+  outline: transparent;
+  padding: .5rem;
+  border: none;
+  overflow: hidden;
+  direction: var(--site-dirction);
+  font-size: 1.1em;
+  transition: all 500ms;
+  font-weight: 600;
+  width: 100%;
+  resize: none;
+}
+.post-form-container:focus-within{
+  --height: auto;
+}
+.post-image-container {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  background: rgb(121, 131, 129);
+  
+}
+.submit-btn {
+  background: var(--background);
+  border: none;
+  outline: transparent;
+  padding: .5rem 1rem;
+  border-radius: .375rem;
+  font-weight: 500;
+}

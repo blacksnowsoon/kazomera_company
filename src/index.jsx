@@ -1,41 +1,41 @@
 import './index.css';
 import './App.css';
+import App from './App';
 
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 // react router dom imports 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from 'app/store'; 
+import { fetchUsers } from 'features/users/userSlice';
 
-import App from './App';
-// pathes imports
-import Home from './_main/home/Home';
-import ArticlesInvestments from './components/articles_investments/article_invest'
+
+
 // import './assets/css/normalize.css'; 
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-    children: [
-      {
-        index: true,
-        path: '/',
-        element: <Home />,
-      },
-      {
-        element: <ArticlesInvestments />,
-        path: '/investment',
-      }
-    ]
-  }
-])
+
 
 const container = document.getElementById('root');
 const root = createRoot(container);
 
+
+// start the mock server in dev-mode
+if (process.env.NODE_ENV === 'development') {
+  console.log("starting Server")
+  const {worker} = require('./api/server');
+  worker.start({onUnhandledRequest: 'bypass'});
+  store.dispatch(fetchUsers());
+}
+
+
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 

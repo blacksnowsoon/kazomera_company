@@ -3,7 +3,6 @@
 /*  the id of root app container */
 #root {
   margin: 0 auto;
-  text-align: center;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   
@@ -24,7 +23,10 @@
 [data-toggle="collapse"]:not(.collapsed) .if-collapsed {
   display: none;
 }
-
+.container {
+  max-width: 43.75rem;
+  margin: 0 auto;
+}
 
 
 

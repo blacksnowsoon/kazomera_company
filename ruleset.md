@@ -2,6 +2,7 @@
 
 ## Codeing in the project
   
+
     - do not add global css class outside of app.css.
     - do not use hight periorty selectors outside of index.css.
     - try to use meaningfull comments over the functions and at the top of the components you create.
@@ -21,3 +22,4 @@
     - you should add me in the assignees and abdelfatah in the reviewers 
 
 ![pull reqquist image](https://github.com/AbdelfatahMongy/kazomera_company/blob/main/src/assets/pullrequiest.png?raw=true)
+
