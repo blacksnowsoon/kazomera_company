@@ -4,11 +4,11 @@ import { readFileAsDataURL, resizeImage } from 'utiles/utilesMethods';
 const SingleImageInput = (props) => {
   const { label, fieldState, onChange, inputRef, errors, maxHeight, className, name } = props
   let fileInput;
-  console.log("image",props)
+  
   const [data, setData] = React.useState(props.value || '')
   const [canvas, setCanvas] = React.useState('')
   const styles = {
-    position: 'relative'
+    
   }
   
 
@@ -46,7 +46,7 @@ const SingleImageInput = (props) => {
     styles.backgroundSize = 'cover'
   }
   return (
-    <div className={className} style={styles}>
+    <div className={className} >
       <input type='hidden' name={name} value={data} />
       <input 
         ref={(n) => (fileInput = n)}
@@ -57,7 +57,7 @@ const SingleImageInput = (props) => {
           height: '100%',
           position: 'absolute',
           left: 0,
-          top: 0,
+          bottom: 0,
           opacity: 0
         }}
         />

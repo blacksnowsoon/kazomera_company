@@ -8,6 +8,9 @@ import { BiUserCircle } from "react-icons/bi";
 import logo from "assets/site-logos/logo.png";
 import classes from "./topNavs.module.css";
 
+// this routs array must be placed in the app_structure as it's all content in the app to be able 
+// to change the langusge and call it from there 
+
 export const routes = [
   {
     name: "كازوميرا",
@@ -26,7 +29,7 @@ export const routes = [
   },
   {
     name: "الأخبار",
-    route: "/news",
+    route: "/",
     icon: <GrHomeRounded size={30} />,
   },
 ];

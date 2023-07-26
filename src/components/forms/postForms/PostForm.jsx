@@ -23,7 +23,7 @@ const PostForm = ({onAddPost}) => {
 
   
   return (
-    <form className='post-form'>
+    <form className='post-form-container'>
       <ControllerField
         {...{
           control,

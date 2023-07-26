@@ -1,12 +1,12 @@
 .top_nav {
-  background-color: #fff;
+  /* background-color: #fff; */
   height: 60px;
   width: 100%;
   padding: 0 10px;
 }
 
 .top_nav .wrapper {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,7 +30,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #eeeeee;
+  /* background-color: #eeeeee; */
 }
 
 /* Links Section */

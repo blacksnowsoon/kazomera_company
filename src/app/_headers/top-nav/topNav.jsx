@@ -39,6 +39,7 @@ const TopNavs = () => {
         {/* flex-1 */}
         <div className={classes.logo_wrapper}>
           <div className={classes.serch_bar}>
+          {/* convert this component to form */}
             <div className={classes.serch_btn}>
               <AiOutlineSearch size={24} />
             </div>

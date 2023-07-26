@@ -4,7 +4,6 @@ import React from 'react'
 const InputText = (props) => {
   const {  name, type, label, fieldState, onChange, inputRef, errors} = props
   
-  console.log("textarea",props)
   const {invalid, isDirty } = fieldState
   const [value, setValue] = React.useState(props.value || '')
 
